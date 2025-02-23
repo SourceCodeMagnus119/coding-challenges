@@ -1,0 +1,61 @@
+### 1. MUST KNOW TOPICS
+    |
+    |__ The Three main pillars of DSA are `DATA STRUCTURES`, `ALGORITHMS`, Problem-Solving Technikues`
+
+### 2. LEARn ONE TOPIC AT A TIME
+    |
+    |__ Begin with linear data structures like arrays, linked lists, stack, kues.
+    |
+    |__ Follow the order bellow.
+
+image from phone
+
+### 3. HOW TO START LEARNING A NEW TOPIC
+    |
+    |__ Start with basics by learning what it is? How it represented in code? Differenct operations you can perform on it/ Use Cases? And Their Time/space complexities.
+    |
+    |__ Understand where and how it is used in Real Wrold scenarios/ Real World Application.
+    |
+    |__ Use Pen and Paper.
+    |
+    |__ Implement it From scratch. Write code to implement the data structure on algorithm from scratch
+    |
+    |__ Learn the Inbuild library functions. Learn how to use standard libraries in your language that provide data structures and algorithms.
+    |
+    |__ Solve Simple Problems. Practice simple problems related to the topic to build confidence.
+
+### RESOURCES
+    |
+    |__ Abdul Bari's Algorithms playlist.
+    |
+    |__ William Fiset's Data Structures playlist
+    |
+    |__ William Fiset's Graphs playlist
+    |
+    |__ Tushar Roy's Dynamic Programming playlist
+    |
+    |__ Coursera Algorithms 1
+    |
+    |__ Coursera Algorithms 2
+
+### HOW TO SCALE YOUR DSA KNOLEDGE
+    |
+    |__ Prioritize Solving problems over theory. Real learning happens when you apply that knowledge to solve problems.
+    |
+    |__ Challenge yourself
+    |
+    |__ Understand Don't memorize. Focus on Understanding the underlying conceps and principles.
+    |
+    |__ Think in Patterns. Many problems share underlying patterns. recognize these patterns can help you kuickly identify the right approach to solve the new problem.
+
+image from phone
+
+### RETAIN WHAT YOU LEARn
+    |
+    |__ Repitition is key to transferring knowledge from short-term to long-term.
+    |
+    |__ Create Revision List.
+    |
+    |__ Bookmark anything Important.
+
+### BE CONSITENT
