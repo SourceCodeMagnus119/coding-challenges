@@ -51,7 +51,7 @@ const reverseMax = (arr) => {
     if(arr.length === 0) return null;
     const max = arr[0];
 
-    for(let j = arr.length; j > 0; j__) {
+    for(let j = arr.length; j > 0; j--) {
         if(arr[i] < max) {
             max = arr[i];
         }
