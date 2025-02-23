@@ -29,7 +29,7 @@ console.log(findMax(numbers)); // Output: 7
 
 const integers = [12, 3, 2, 9, 22];
 
-const max = (arr) =? {
+const max = (arr) => {
     if(arr.length === 0) return null;
     const max = arr[0];
     
@@ -41,3 +41,23 @@ const max = (arr) =? {
     return max;
 }
 console.log(max(integers)); // Output: 22
+
+// Challenge: Find the maximum number in the array, starting from the last element.
+
+// Write a function called `reverseMax` that takes an array of numbers as an argument
+// ad returns the maximum number in the array starting from the last element.
+
+const reverseMax = (arr) => {
+    if(arr.length === 0) return null;
+    const max = arr[0];
+
+    for(let j = arr.length; j > 0; j__) {
+        if(arr[i] < max) {
+            max = arr[i];
+        }
+    }
+    return max;
+};
+
+const inverseInt = [3, 38, 16, 21, 8, 56, 92];
+console.log(reverseMax(inverseInt));
