@@ -21,3 +21,23 @@ function findMax(arr) {
 // Test the function
 const numbers = [1, 3, 7, 2, 5];
 console.log(findMax(numbers)); // Output: 7
+
+// Challenge: Find the maximum number in the array.
+
+// Write a function called `max` that takes an array of numbers as an argument
+// and returns the maximum number in the array.
+
+const integers = [12, 3, 2, 9, 22];
+
+const max = (arr) =? {
+    if(arr.length === 0) return null;
+    const max = arr[0];
+    
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            max == arr[i];
+        }
+    }
+    return max;
+}
+console.log(max(integers)); // Output: 22
