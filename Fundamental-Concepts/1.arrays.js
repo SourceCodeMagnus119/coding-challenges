@@ -78,6 +78,27 @@ const bigInt = (arr) => {
             max = arr[i];
         }
     }
+    return max
 };
 
 console.log(bigInt(nums)); // Output: 925, Time Complexity: O(n).
+
+// Challenge: Find the minimum number in the array.
+
+// Write a function called "min" that takes an array of numbers as an argument
+// and returns the minimum number in the array.
+
+const min = (arr) => {
+    if(arr.length === 0) return null;
+    const min = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+};
+
+const val = [2, 6, 1];
+console.log(min(val)); // Output: 1, Time Complexity: O(n).
