@@ -102,3 +102,43 @@ const min = (arr) => {
 
 const val = [2, 6, 1];
 console.log(min(val)); // Output: 1, Time Complexity: O(n).
+
+// Challenge: Find the Minimum number in the array.
+
+// Write a function called "findMin" that takes an array of numbers as an argument
+// and returns the minimum number in the array.
+
+const findMin = (arr) => {
+    if(arr.length ===0) return null;
+    const min = arr[0];
+
+    for(let i = arr.length; i > 0; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+const dec = [1.0210111329242231, 1.0210111329242231, 1.0210111329242231, 3.29108300291840145101, 1.19102948201001924, 1.089479253198942, 1.19048924893579375201, 1.209348024808520385729277 ];
+console.log(findMin(dec)); //Output: 1.0210111329242231, Time Complexity: O(n).
+
+// Challenge: Find the minimum number in the array.
+
+// Write a function called "reverseMin" that takes an array of numbers as an argument
+// and returns the minimum number in the array starting from the last element.
+
+const reverseMin = (arr) => {
+    if(arr.length === 0) return null;
+    const min = arr[0];
+
+    for(let i = arr.length; i > 0; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+};
+
+const int = [2, 6, 1, 6, 3, 8, 1, 8, 94, 12, 2, 76, 2, 1, 8, 2, 1];
+console.log(reverseMin(int)); // Output: 1, Time Complexity: O(n).
