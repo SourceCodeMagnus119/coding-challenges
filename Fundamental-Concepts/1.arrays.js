@@ -142,3 +142,33 @@ const reverseMin = (arr) => {
 
 const int = [2, 6, 1, 6, 3, 8, 1, 8, 94, 12, 2, 76, 2, 1, 8, 2, 1];
 console.log(reverseMin(int)); // Output: 1, Time Complexity: O(n).
+
+// Challenge: Find the minimum number in the arrays Then add the final values together and return them.
+
+// Write a function called "sum" that takes two arrays of numbers as arguments
+// and returns the sumproduct of the minimum number in each array
+
+const int1 = [1000, 480, 522, 314, 872, 592, 222, 572, 1902, 50002, 1847, 29948, 333013, 29384, 22, 3852];
+const int2 = [9, 22, 66, 25, 31, 66, 73, 112, 73, 8, 6,  2, 424, 980, 33, 225,11123, 55253, 63, 342, 647, 885];
+
+const sum = (arr1, arr2) => {
+    if(arr1.length === 0 || arr2.length === 0) return null;
+    const min1 = arr1[0];
+    const min2 = arr2[0];
+
+    for(let i = 0; i < arr1.length; i++) {
+        if(arr1[i] < min1) {
+            min1 = arr1[i];
+        }
+    }
+
+    for(let j = 0; i < arr2.length; j++) {
+        if(arr2[j] < min2) {
+            min2 = arr2[j];
+        }
+    }
+    const output = min1 * min2;
+    return output;
+};
+
+console.log(sum(int1, int2)); // Output: 198, Time Complexity: O(n).
