@@ -172,3 +172,26 @@ const sum = (arr1, arr2) => {
 };
 
 console.log(sum(int1, int2)); // Output: 198, Time Complexity: O(n).
+
+
+// Challenge: Find the maximum number in the array then return as a String.
+
+// Write a function called "sumString" that takes an array as an argument
+// and returns the maximum number in the array then converts it to a string.
+
+const ints = [2500, 800, 5399, 299, 910, 900, 2192, 3500, 182, 11185, 92, 192, 182, 90, 42, 33, 8279, 1020, 2899, 86, 272, 18, 98, 281904, 2845, 2374, 288489, 2283497, 274298, 2323, 897505, 385027, 1749284, 2749283, 42805];
+
+const sumString = (arr) => {
+    if(arr.length === 0) return null;
+    const max = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    const string = max.toString();
+    return string;
+}
+
+console.log(sumString(ints));
