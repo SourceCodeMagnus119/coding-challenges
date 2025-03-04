@@ -194,4 +194,25 @@ const sumString = (arr) => {
     return string;
 }
 
-console.log(sumString(ints));
+console.log(sumString(ints)); // Output: 2749268, Time Complexity: 0(n).
+
+// CodingChallenge: Find the maximum number in the array then return split.
+
+// Write a function called "maxSum" that takes an array as an argument.
+// adn returns the maximum number in the array.
+
+const maxSum = (arr) => {
+    if(arr.length === 0) return null;
+    const max = arr[0];
+
+    for(let j = arr.length; j > 0; j__) {
+        if(arr[j] > max) {
+            max = arr[i];
+        }
+    }
+    const split = max.toString("").split();
+    return split;
+}
+
+const sums = [123, 456, 789, 101112, 131415, 161718, 192021, 222324, 252627, 282930, 313233, 343536, 373839, 404142, 434445, 464748, 495051, 525354, 555657, 585960];
+console.log(maxSum(sums)) // Output: 585960, Time Complexity: 0(n)
