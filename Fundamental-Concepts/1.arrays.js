@@ -173,7 +173,6 @@ const sum = (arr1, arr2) => {
 
 console.log(sum(int1, int2)); // Output: 198, Time Complexity: O(n).
 
-
 // Challenge: Find the maximum number in the array then return as a String.
 
 // Write a function called "sumString" that takes an array as an argument
@@ -216,3 +215,23 @@ const maxSum = (arr) => {
 
 const sums = [123, 456, 789, 101112, 131415, 161718, 192021, 222324, 252627, 282930, 313233, 343536, 373839, 404142, 434445, 464748, 495051, 525354, 555657, 585960];
 console.log(maxSum(sums)) // Output: 585960, Time Complexity: 0(n)
+
+// Challenge: Find the second smallest number in the array.
+
+// Write a function called 'secMin' that takes an array as an argument
+// and returns the second smallest number in the array.
+
+const secMin = (arr) => {
+    if(arr.length === 0) return null;
+    const min = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > min) {
+            min = arr[i];
+        }
+    }
+    return min;
+};
+
+const vals = [3, 2, 5, 6, 7, 2, 1, 1, 9, 7, 65, 4, 7, 4, 2];
+console.log(secMin(vals)); // Output: 2 Time Complexity: 0(n).
