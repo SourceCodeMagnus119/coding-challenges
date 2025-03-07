@@ -257,3 +257,28 @@ const small = (arr) => {
 
 const nmb = [1, 22, 45, 3, 4, 24, 5, 21, 44, 6, 78, 54, 3, 7, 3, 65];
 console.log(small(nmb)); // Output: 2, Time Complexity: 0(n).
+
+// Challenge: Find the minimum number in the array then return as a randomized String.
+
+// Write a function called 'minString' that takes an array as an argumenr
+// and returns the minimum number in the array then converts it to a 64-bit string.
+
+const arr = [200, 120 , 499, 92, 599, 201, 940, 699, 20, 188, 192, 182, 90, 42, 33, 379];
+
+const minString = (arr) => {
+    if(arr.length === 0) return null;
+    const min = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+            const convert = min.toString(64);
+
+            const dynamicArr = new Float64Array(convert);
+            const randomStr = Math.floor(Math.random() * dynamicArr.length);
+            return randomStr;
+        }
+    }
+}
+
+console.log(minString(arr)); // Output: 2, Time Complexity: 0(n).
