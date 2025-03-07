@@ -235,3 +235,25 @@ const secMin = (arr) => {
 
 const vals = [3, 2, 5, 6, 7, 2, 1, 1, 9, 7, 65, 4, 7, 4, 2];
 console.log(secMin(vals)); // Output: 2 Time Complexity: 0(n).
+
+// Challenge: Find the Minumum number in the array from the last indices.
+
+// Write a function called 'small' that takes an array as an argument
+// and returns the minimum number in the array starting from the last element.
+
+const small = (arr) => {
+    if(arr.length === 0) return null;
+    const min = arr[0];
+
+    for(let i = arr.length; i > 0; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+
+            Math.random(min * 2);
+        }
+    }
+    return min.toString();
+};
+
+const nmb = [1, 22, 45, 3, 4, 24, 5, 21, 44, 6, 78, 54, 3, 7, 3, 65];
+console.log(small(nmb)); // Output: 2, Time Complexity: 0(n).
