@@ -282,3 +282,29 @@ const minString = (arr) => {
 }
 
 console.log(minString(arr)); // Output: 2, Time Complexity: 0(n).
+
+// Challenge: Find the maximum number in the array and filter out duplicate number.
+
+// Write a function called 'maxFilter' that takes an array as an argument
+// and returns the maximum number in the array then filters out duplicate numbers.
+
+const bin = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const maxFilter = (arr) => {
+    if(arr.length === 0) return null;
+    const max = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+
+            const filter = arr.filter((num, index) => {
+                return arr.indexOf(num) === index;
+            });
+            console.log(filter); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        }
+    }
+    return max;
+};
+
+console.log(maxFilter(bin)); // Output: 10, Time Complexity: 0(n).
