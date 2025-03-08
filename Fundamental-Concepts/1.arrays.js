@@ -338,3 +338,28 @@ function findSecondLargest(arr) {
 
 const x = [1, 3, 7, 2, 5];
 console.log(findSecondLargest(x)); // Output: 5 Time Complexity: 0(n).
+
+// Challenge: Find the Second Largest Number in an Array.
+
+// Write a function called `secondLargest` that takes an array of numbers as an argument
+// and returns the second largest number in the array.
+
+const v = [22, 31, 44, 5, 66, 70, 90, 29, 98, 12, 50, 57, 25, 61, 98, 87, 54];
+
+const secondLargest = (arr) => {
+    if(arr.length === 0) return null;
+    let max = arr[0];
+    let secondLargest = arr[1];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            secondLargest = max;
+            max = arr[i];
+        } else if(secondLargest < arr[i]) {
+            secondLargest = arr[i];
+        }
+    }
+    return secondLargest;
+}
+
+console.log(secondLargest(v)); // Output: 98, Time Complexity: 0(n).
