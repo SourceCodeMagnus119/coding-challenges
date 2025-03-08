@@ -49,11 +49,11 @@ console.log(max(integers)); // Output: 22, Time Complexity: O(n).
 
 const reverseMax = (arr) => {
     if(arr.length === 0) return null;
-    const max = arr[0];
+    let max = arr[0];
 
     for(let j = arr.length; j > 0; j--) {
-        if(arr[i] < max) {
-            max = arr[i];
+        if(arr[j] < max) {
+            max = arr[j];
         }
     }
     return max;
@@ -71,7 +71,7 @@ const nums = [7, 4, 39, 16, 18, 22, 23, 15, 25, 36, 19, 112, 92, 873, 228, 592, 
 
 const bigInt = (arr) => {
     if(arr.length === 0) return null;
-    const max = arr[0];
+    let max = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > max) {
@@ -90,7 +90,7 @@ console.log(bigInt(nums)); // Output: 925, Time Complexity: O(n).
 
 const min = (arr) => {
     if(arr.length === 0) return null;
-    const min = arr[0];
+    let min = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] < min) {
@@ -110,7 +110,7 @@ console.log(min(val)); // Output: 1, Time Complexity: O(n).
 
 const findMin = (arr) => {
     if(arr.length ===0) return null;
-    const min = arr[0];
+    let min = arr[0];
 
     for(let i = arr.length; i > 0; i++) {
         if(arr[i] < min) {
@@ -130,7 +130,7 @@ console.log(findMin(dec)); //Output: 1.0210111329242231, Time Complexity: O(n).
 
 const reverseMin = (arr) => {
     if(arr.length === 0) return null;
-    const min = arr[0];
+    let min = arr[0];
 
     for(let i = arr.length; i > 0; i++) {
         if(arr[i] < min) {
@@ -153,8 +153,8 @@ const int2 = [9, 22, 66, 25, 31, 66, 73, 112, 73, 8, 6,  2, 424, 980, 33, 225,11
 
 const sum = (arr1, arr2) => {
     if(arr1.length === 0 || arr2.length === 0) return null;
-    const min1 = arr1[0];
-    const min2 = arr2[0];
+    let min1 = arr1[0];
+    let min2 = arr2[0];
 
     for(let i = 0; i < arr1.length; i++) {
         if(arr1[i] < min1) {
@@ -182,7 +182,7 @@ const ints = [2500, 800, 5399, 299, 910, 900, 2192, 3500, 182, 11185, 92, 192, 1
 
 const sumString = (arr) => {
     if(arr.length === 0) return null;
-    const max = arr[0];
+    let max = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > max) {
@@ -202,7 +202,7 @@ console.log(sumString(ints)); // Output: 2749268, Time Complexity: 0(n).
 
 const maxSum = (arr) => {
     if(arr.length === 0) return null;
-    const max = arr[0];
+    let max = arr[0];
 
     for(let j = arr.length; j > 0; j__) {
         if(arr[j] > max) {
@@ -223,7 +223,7 @@ console.log(maxSum(sums)) // Output: 585960, Time Complexity: 0(n)
 
 const secMin = (arr) => {
     if(arr.length === 0) return null;
-    const min = arr[0];
+    let min = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > min) {
@@ -243,7 +243,7 @@ console.log(secMin(vals)); // Output: 2 Time Complexity: 0(n).
 
 const small = (arr) => {
     if(arr.length === 0) return null;
-    const min = arr[0];
+    let min = arr[0];
 
     for(let i = arr.length; i > 0; i++) {
         if(arr[i] < min) {
@@ -267,15 +267,15 @@ const arr = [200, 120 , 499, 92, 599, 201, 940, 699, 20, 188, 192, 182, 90, 42, 
 
 const minString = (arr) => {
     if(arr.length === 0) return null;
-    const min = arr[0];
+    let min = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] < min) {
             min = arr[i];
-            const convert = min.toString(64);
+            let convert = min.toString(64);
 
-            const dynamicArr = new Float64Array(convert);
-            const randomStr = Math.floor(Math.random() * dynamicArr.length);
+            let dynamicArr = new Float64Array(convert);
+            let randomStr = Math.floor(Math.random() * dynamicArr.length);
             return randomStr;
         }
     }
@@ -292,7 +292,7 @@ const bin = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const maxFilter = (arr) => {
     if(arr.length === 0) return null;
-    const max = arr[0];
+    let max = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > max) {
@@ -308,3 +308,33 @@ const maxFilter = (arr) => {
 };
 
 console.log(maxFilter(bin)); // Output: 10, Time Complexity: 0(n).
+
+// Challenge: Find the Second Largest Number in an Array
+
+// Write a function called `findSecondLargest` that takes an array of numbers as an argument
+// and returns the second largest number in the array.
+
+// Example:
+// Input: [1, 3, 7, 2, 5]
+// Output: 5
+
+function findSecondLargest(arr) {
+    if(arr.length === 0) return null;
+    let max = arr[0];
+    let secondLargest = arr[1];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            secondLargest = max;
+            console.log(secondLargest);
+            max = arr[i];
+            console.log(max);
+        } else if(arr[i] > secondLargest) {
+            secondLargest = arr[i];
+        }
+    }
+    return secondLargest;
+};
+
+const x = [1, 3, 7, 2, 5];
+console.log(findSecondLargest(x)); // Output: 5 Time Complexity: 0(n).
