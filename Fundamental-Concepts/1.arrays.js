@@ -410,3 +410,34 @@ const largeByte = (arr) => {
     return { maxNum, uniqueArr };
 }
 console.log(largeByte(array)); // Output: { maxNum: 9, uniqueArr: [1,2,3,4,5,6,7,8,9] }, Time Complexity: 0(n).
+
+// Challenge: Find the 3 largest number in the array.
+
+// Write a function called `thirdLargest` that takes an array of numbers as an argument
+// and return the smallest number in the set.
+
+const bit = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+
+const thirdLargest = (arr) => {
+    if(arr.length === 0) return null;
+    let max = -arr[0];
+    let secondmax = -arr[1];
+    let thirdMax = -arr[2];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            thirdMax = secondmax;
+            secondmax = max;
+            max = arr[i];
+        } else if(secondmax <= arr[i]) {
+            thirdMax = secondmax;
+            secondmax = arr[i];
+        } else if(thirdMax <= arr[i]) {
+            thirdMax = arr[i];
+        }
+    }
+    
+    return thirdMax;
+};
+
+console.log(thirdLargest(bit)); // Output: 14, Time Complexity: O(n).
