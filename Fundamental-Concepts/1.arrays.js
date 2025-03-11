@@ -83,91 +83,91 @@ const bigInt = (arr) => {
 
 console.log(bigInt(nums)); // Output: 925, Time Complexity: O(n).
 
-// Challenge: Find the minimum number in the array.
+// Challenge: Find the min2imum number in the array.
 
-// Write a function called "min" that takes an array of numbers as an argument
-// and returns the minimum number in the array.
+// Write a function called "min2" that takes an array of numbers as an argument
+// and returns the min2imum number in the array.
 
-const min = (arr) => {
+const min2 = (arr) => {
     if(arr.length === 0) return null;
-    let min = arr[0];
+    let min2 = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i] < min) {
-            min = arr[i];
+        if(arr[i] < min2) {
+            min2 = arr[i];
         }
     }
-    return min;
+    return min2;
 };
 
 const val = [2, 6, 1];
-console.log(min(val)); // Output: 1, Time Complexity: O(n).
+console.log(min2(val)); // Output: 1, Time Complexity: O(n).
 
-// Challenge: Find the Minimum number in the array.
+// Challenge: Find the Min2imum number in the array.
 
-// Write a function called "findMin" that takes an array of numbers as an argument
-// and returns the minimum number in the array.
+// Write a function called "findMin2" that takes an array of numbers as an argument
+// and returns the min2imum number in the array.
 
-const findMin = (arr) => {
+const findMin2 = (arr) => {
     if(arr.length ===0) return null;
-    let min = arr[0];
+    let min2 = arr[0];
 
     for(let i = arr.length; i > 0; i++) {
-        if(arr[i] < min) {
-            min = arr[i];
+        if(arr[i] < min2) {
+            min2 = arr[i];
         }
     }
-    return min;
+    return min2;
 }
 
 const dec = [1.0210111329242231, 1.0210111329242231, 1.0210111329242231, 3.29108300291840145101, 1.19102948201001924, 1.089479253198942, 1.19048924893579375201, 1.209348024808520385729277 ];
-console.log(findMin(dec)); //Output: 1.0210111329242231, Time Complexity: O(n).
+console.log(findMin2(dec)); //Output: 1.0210111329242231, Time Complexity: O(n).
 
-// Challenge: Find the minimum number in the array.
+// Challenge: Find the min2imum number in the array.
 
-// Write a function called "reverseMin" that takes an array of numbers as an argument
-// and returns the minimum number in the array starting from the last element.
+// Write a function called "reverseMin2" that takes an array of numbers as an argument
+// and returns the min2imum number in the array starting from the last element.
 
-const reverseMin = (arr) => {
+const reverseMin2 = (arr) => {
     if(arr.length === 0) return null;
-    let min = arr[0];
+    let min2 = arr[0];
 
     for(let i = arr.length; i > 0; i++) {
-        if(arr[i] < min) {
-            min = arr[i];
+        if(arr[i] < min2) {
+            min2 = arr[i];
         }
     }
-    return min;
+    return min2;
 };
 
 const int = [2, 6, 1, 6, 3, 8, 1, 8, 94, 12, 2, 76, 2, 1, 8, 2, 1];
-console.log(reverseMin(int)); // Output: 1, Time Complexity: O(n).
+console.log(reverseMin2(int)); // Output: 1, Time Complexity: O(n).
 
-// Challenge: Find the minimum number in the arrays Then add the final values together and return them.
+// Challenge: Find the min2imum number in the arrays Then add the final values together and return them.
 
 // Write a function called "sum" that takes two arrays of numbers as arguments
-// and returns the sumproduct of the minimum number in each array
+// and returns the sumproduct of the min2imum number in each array
 
 const int1 = [1000, 480, 522, 314, 872, 592, 222, 572, 1902, 50002, 1847, 29948, 333013, 29384, 22, 3852];
 const int2 = [9, 22, 66, 25, 31, 66, 73, 112, 73, 8, 6,  2, 424, 980, 33, 225,11123, 55253, 63, 342, 647, 885];
 
 const sum = (arr1, arr2) => {
     if(arr1.length === 0 || arr2.length === 0) return null;
-    let min1 = arr1[0];
-    let min2 = arr2[0];
+    let min21 = arr1[0];
+    let min22 = arr2[0];
 
     for(let i = 0; i < arr1.length; i++) {
-        if(arr1[i] < min1) {
-            min1 = arr1[i];
+        if(arr1[i] < min21) {
+            min21 = arr1[i];
         }
     }
 
     for(let j = 0; i < arr2.length; j++) {
-        if(arr2[j] < min2) {
-            min2 = arr2[j];
+        if(arr2[j] < min22) {
+            min22 = arr2[j];
         }
     }
-    const output = min1 * min2;
+    const output = min21 * min22;
     return output;
 };
 
@@ -218,61 +218,61 @@ console.log(maxSum(sums)) // Output: 585960, Time Complexity: 0(n)
 
 // Challenge: Find the second smallest number in the array.
 
-// Write a function called 'secMin' that takes an array as an argument
+// Write a function called 'secMin2' that takes an array as an argument
 // and returns the second smallest number in the array.
 
-const secMin = (arr) => {
+const secMin2 = (arr) => {
     if(arr.length === 0) return null;
-    let min = arr[0];
+    let min2 = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i] > min) {
-            min = arr[i];
+        if(arr[i] > min2) {
+            min2 = arr[i];
         }
     }
-    return min;
+    return min2;
 };
 
 const vals = [3, 2, 5, 6, 7, 2, 1, 1, 9, 7, 65, 4, 7, 4, 2];
-console.log(secMin(vals)); // Output: 2 Time Complexity: 0(n).
+console.log(secMin2(vals)); // Output: 2 Time Complexity: 0(n).
 
-// Challenge: Find the Minumum number in the array from the last indices.
+// Challenge: Find the Min2umum number in the array from the last indices.
 
 // Write a function called 'small' that takes an array as an argument
-// and returns the minimum number in the array starting from the last element.
+// and returns the min2imum number in the array starting from the last element.
 
 const small = (arr) => {
     if(arr.length === 0) return null;
-    let min = arr[0];
+    let min2 = arr[0];
 
     for(let i = arr.length; i > 0; i++) {
-        if(arr[i] < min) {
-            min = arr[i];
+        if(arr[i] < min2) {
+            min2 = arr[i];
 
-            Math.random(min * 2);
+            Math.random(min2 * 2);
         }
     }
-    return min.toString();
+    return min2.toString();
 };
 
 const nmb = [1, 22, 45, 3, 4, 24, 5, 21, 44, 6, 78, 54, 3, 7, 3, 65];
 console.log(small(nmb)); // Output: 2, Time Complexity: 0(n).
 
-// Challenge: Find the minimum number in the array then return as a randomized String.
+// Challenge: Find the min2imum number in the array then return as a randomized String.
 
-// Write a function called 'minString' that takes an array as an argumenr
-// and returns the minimum number in the array then converts it to a 64-bit string.
+// Write a function called 'min2String' that takes an array as an argumenr
+// and returns the min2imum number in the array then converts it to a 64-bit string.
 
 const arr = [200, 120 , 499, 92, 599, 201, 940, 699, 20, 188, 192, 182, 90, 42, 33, 379];
 
-const minString = (arr) => {
+const min2String = (arr) => {
     if(arr.length === 0) return null;
-    let min = arr[0];
+    let min2 = arr[0];
 
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i] < min) {
-            min = arr[i];
-            let convert = min.toString(64);
+        if(arr[i] < min2) {
+            min2 = arr[i];
+            let convert = min2.toString(64);
 
             let dynamicArr = new Float64Array(convert);
             let randomStr = Math.floor(Math.random() * dynamicArr.length);
@@ -281,7 +281,7 @@ const minString = (arr) => {
     }
 }
 
-console.log(minString(arr)); // Output: 2, Time Complexity: 0(n).
+console.log(min2String(arr)); // Output: 2, Time Complexity: 0(n).
 
 // Challenge: Find the maximum number in the array and filter out duplicate number.
 
@@ -363,3 +363,50 @@ const secondLargest = (arr) => {
 }
 
 console.log(secondLargest(v)); // Output: 98, Time Complexity: 0(n).
+
+// Challenfe: Find the second smallest number in an array.
+
+// Write a function called `SecondSmallest` that takes an array of numbers as an argument
+//  and returns the second smallest number in the array.
+
+const byte = [64, 32, 43, 22, 13, 26, 63, 77, 90, 98, 28, 78, 82, 91, 40, 21];
+
+const SecondSmallest = (arr) => {
+    if(arr.length == 0) return null;
+    let min2 = arr[0];
+    let min1 = arr[1];
+
+    for(let i = arr.length; i > 0; i--) {
+        if(min2 < arr[i]) {
+            min1 = min2;
+            min2 = arr[i];
+        } else if(min1 < arr[i]) {
+            min1 = arr[i];
+        }
+    }
+    return min1;
+}
+
+console.log(SecondSmallest(byte)); // Output:  Time Complexity: 0(n).
+
+// Chacllenge: Find the largest number in the array and remove duplicate values.
+
+// Write a function `largeByte` that takes an array of numbers as an argument
+// and returns the largest number in the array and removes duplicates.
+
+const array = [1,2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2,1];
+
+const largeByte = (arr) => {
+    if(arr.length == 0) return null;
+    let maxNum = -Number.MAX_VALUE;
+
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxNum) {
+            maxNum = arr[i];
+        }
+    }
+
+    const uniqueArr = [...new Set(arr)];
+    return { maxNum, uniqueArr };
+}
+console.log(largeByte(array)); // Output: { maxNum: 9, uniqueArr: [1,2,3,4,5,6,7,8,9] }, Time Complexity: 0(n).
