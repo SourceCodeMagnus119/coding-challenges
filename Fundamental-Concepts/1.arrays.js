@@ -487,3 +487,16 @@ const buff = (arr) => {
 }
 
 console.log(buff(buffers)); // Output: 10, Time Complexity: O(n).
+
+// Write a function called `dupes` that takes an array of numbers as an arg
+// and returns the an array with no duplicate values.
+const dupVal = [1,1,2,2,3,3,4,4,4,5,5,5,6,6,6,7,7,7,8,8,8,9,9,9];
+
+const dupes = (arr) => {
+    if(arr.length === 0) return null;
+
+    const noDupes = [...new Set(arr)];
+    return noDupes;
+}
+
+console.log(dupes(dupVal)); // Output:  Time Complexity: 0(n).
