@@ -436,8 +436,36 @@ const thirdLargest = (arr) => {
             thirdMax = arr[i];
         }
     }
-    
+
     return thirdMax;
 };
 
 console.log(thirdLargest(bit)); // Output: 14, Time Complexity: O(n).
+
+// Write a function called `thirdMaxSum` that takes an array of numbers as an argument
+// and returns the third largest number in the array.
+const nms = [2,3,4,5,6,7,8,9];
+
+const thirdMaxSum = (arr) => {
+	if(arr.length === 0)  return null;
+	const x = arr[0];
+	const y = arr[1];
+	const z = arr[2];
+
+	for(let i = arr.length; i > 0; i--) {
+		if(arr[i] > x) {
+			z = y;
+			y = x;
+			x = arr[i];
+		} else if(y < arr[i]) {
+			z = y;
+			y = arr[i];
+		} else if(z < arr[i]) {
+			z = arr[i];
+		}
+	}
+
+	return z;
+}
+
+console.log(thirdMaxSum(nms)); // Output: 7 Time Complexity: 0(n);
