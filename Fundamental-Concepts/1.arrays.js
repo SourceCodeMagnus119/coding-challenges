@@ -469,3 +469,21 @@ const thirdMaxSum = (arr) => {
 }
 
 console.log(thirdMaxSum(nms)); // Output: 7 Time Complexity: 0(n);
+
+// Write a function called "buff" that takes an array of numbers as an arguments
+// and returns the all numbers as a buffer.
+const buffers  = [1, 3, 5, 7, 8, 10];
+
+const buff = (arr) => {
+    if(arr.length === 0) return null;
+    let x = arr[0];
+
+    for(let i = 1; i < arr.length; i++) {
+        if(arr[i] > x) {
+            x = arr[i];
+        }
+    }
+    return x;
+}
+
+console.log(buff(buffers)); // Output: 10, Time Complexity: O(n).
