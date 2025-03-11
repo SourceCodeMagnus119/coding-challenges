@@ -171,7 +171,7 @@ const sum = (arr1, arr2) => {
     return output;
 };
 
-console.log(sum(int1, int2)); // Output: 198, Time Complexity: O(n).
+console.log(sum(int1, int2)); // Output: 198, Time Complexity: O(n2).
 
 // Challenge: Find the maximum number in the array then return as a String.
 
