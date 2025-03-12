@@ -535,3 +535,27 @@ const dub4 = (arr) => {
 }
 
 console.log(dub4(dub)); // Output: 5000 Time Complexity: 0(n).
+
+// Challenge: Find the highest pass grade in the array.
+
+// Write a function called 'processGrades' that takes an array as an argument
+// and return the highest passing grade and the failing grades below 50.
+
+const processGrades = (arr) => {
+    if(arr.length === 0) return null;
+    let top = arr[0];
+    let failed = arr[0];
+
+    for(let i = 0; i< arr.length; i++) {
+        if(arr[i] > top) {
+            top = arr[i];
+        }
+    }
+
+    failed.map((fails) => fails.filter((fails) => fails > 50));
+
+    return top, failed;
+}
+
+let grades = [0, 55, 56, 34, 87, 77, 89, 90, 91, 98, 99, 45, 366];
+console.log(processGrades(grades)); // Output: top: 99, failed [...] Time Complexity: 0(n).
