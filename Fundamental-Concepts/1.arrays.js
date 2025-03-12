@@ -500,3 +500,38 @@ const dupes = (arr) => {
 }
 
 console.log(dupes(dupVal)); // Output:  Time Complexity: 0(n).
+
+// Challenge: Find the 4th largest number in the array.
+
+// Create Write a function called 'dub4' that takes an array as an argument
+// and returns the 4th largest number in the array.
+const dub = [1200, 4300, 5000, 2900, 1929, 68000, 3040, 7000, 4857, 8999, 2000];
+
+const dub4 = (arr) => {
+    if(arr.length === 0) return null;
+    let d = arr[3];
+    let c = arr[2];
+    let b = arr[1];
+    let a = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > a) {
+            d = c;
+            c = b;
+            b = a;
+            a = arr[i];
+        } else if(b < arr[i]) {
+            d = c;
+            c = b;
+            b = arr[i];
+        } else if(c < arr[i]) {
+            d = c;
+            c = arr[i];
+        } else if(d < arr[i]) {
+            d = arr[i];
+        }
+    }
+    return d;
+}
+
+console.log(dub4(dub)); // Output: 5000 Time Complexity: 0(n).
