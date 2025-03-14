@@ -421,17 +421,17 @@ const bit = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 const thirdLargest = (arr) => {
     if(arr.length === 0) return null;
     let max = -arr[0];
-    let secondmax = -arr[1];
+    let sendMax = -arr[1];
     let thirdMax = -arr[2];
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > max) {
-            thirdMax = secondmax;
-            secondmax = max;
+            thirdMax = sendMax;
+            sendMax = max;
             max = arr[i];
-        } else if(secondmax <= arr[i]) {
-            thirdMax = secondmax;
-            secondmax = arr[i];
+        } else if(sendMax <= arr[i]) {
+            thirdMax = sendMax;
+            sendMax = arr[i];
         } else if(thirdMax <= arr[i]) {
             thirdMax = arr[i];
         }
@@ -559,3 +559,29 @@ const processGrades = (arr) => {
 
 let grades = [0, 55, 56, 34, 87, 77, 89, 90, 91, 98, 99, 45, 366];
 console.log(processGrades(grades)); // Output: top: 99, failed [...] Time Complexity: 0(n).
+
+// Challenge: Find the second largest number in the array and stringify it.
+
+// Write a function called 'StringInt' that takes an array as an argument.
+// and returns the the second largest number as a json string.
+
+const dig = [1, 2, 3, 4, 5, 9, 8, 7, 6];
+
+const stringInt = (arr) => {
+    if (arr.length === 0) return null;
+    let max = -Infinity;
+    let secondMax = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            secondMax = max;
+            max = arr[i];
+        } else if (arr[i] > secondMax && arr[i] !== max) {
+            secondMax = arr[i];
+        }
+    }
+
+    return JSON.stringify(secondMax);
+};
+
+console.log(stringInt(dig)); // Output: "8"
