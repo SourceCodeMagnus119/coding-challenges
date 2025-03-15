@@ -616,7 +616,7 @@ const noDuplicates = (arr) => {
 
     const unique = [...new Set(arr)];
 
-    return unique;
-}
+    return unique.toString('');
+};
 
 console.log(noDuplicates(duplis)); // Output: [] Time Complexity: 0(n).
