@@ -585,3 +585,38 @@ const stringInt = (arr) => {
 };
 
 console.log(stringInt(dig)); // Output: "8"
+
+// Challenge: Find the ages under 18 in the array.
+
+// Write a function called 'filterAges' that takes an array as an argument
+// and returns all the ages under 18.
+
+let ages = [19, 22, 15, 6, 27, 18, 29, 10, 40, 29, 59, 21, 20, 14, 12, 19, 10];
+
+const filterAges = (arr) => {
+    if(arr.length === 0) return null;
+    const u18 = [];
+
+    arr.forEach((age) => age.filter((age) => age > 18).then(u18.push(age)));
+
+    return u18;
+}
+
+console.log(filterAges(ages)); // Output: [] Time Complexity: 0(n).
+
+// Challenge: Find and remove any duplicate numbers from the  array.
+
+// Write a function called 'noDuplicates' that takes an array as an argument
+// and return the new array with no duplicate integers.
+
+const duplis = [1,1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,12,12,12,12,9,8,4,2,5,6,7,7,8,9,5];
+
+const noDuplicates = (arr) => {
+    if(arr.length === 0) return null;
+
+    const unique = [...new Set(arr)];
+
+    return unique;
+}
+
+console.log(noDuplicates(duplis)); // Output: [] Time Complexity: 0(n).
