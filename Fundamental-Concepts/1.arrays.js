@@ -620,3 +620,22 @@ const noDuplicates = (arr) => {
 };
 
 console.log(noDuplicates(duplis)); // Output: [] Time Complexity: 0(n).
+
+// Challenge: IIncements all numbers in the array.
+
+// Write a function called 'IIncrementHandler' that takes an array as argument
+// and returns each age incremented with on.
+
+const c = [12, 45, 78, 23, 56, 89, 34, 67, 90, 21];
+
+const increment = (arr) => {
+    if(arr.length === 0) return null;
+    let a = [];
+
+    let updatedIncr = arr.forEach((b) => { for(let i = 0; i < b.length; i++) {b[i]++} })
+    a.concat(updatedIncr);
+
+    return a;
+}
+
+console.log(increment(c)); // Output: [] Time Complexity: 0(n).
