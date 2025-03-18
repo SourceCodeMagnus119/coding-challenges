@@ -639,3 +639,16 @@ const increment = (arr) => {
 }
 
 console.log(increment(c)); // Output: [] Time Complexity: 0(n).
+
+// Write afunction called "inc" that takes an array as ana argument and returns the 
+// and returns the number incremented and multiplied by two.
+
+const vl = [12, 45, 78, 23, 56, 89, 34, 67, 90, 21];
+
+const inc = (arr) => {
+    if(arr.length === 0) return null;
+    
+    return arr.map((char) => (char + 2) * 2)
+}
+
+console.log(inc(cl)); // Output: [] Time Complexity: 0(n).
