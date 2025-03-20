@@ -652,3 +652,24 @@ const inc = (arr) => {
 }
 
 console.log(inc(cl)); // Output: [] Time Complexity: 0(n).
+
+// Challenge: Find all even numbers in the array.
+
+// Write a function called 'findEven' that takes an array as an argument
+// and returns the even numbers in the array.
+
+const findEven = (arr) => {
+    if (arr.length === 0) return null;
+    let even = [];
+
+    arr.forEach((x) => {
+        if (x % 2 === 0) {
+            even.push(x);
+        }
+    });
+
+    return even;
+};
+
+const m = [1, 2, 3, 4, 5, 6, 7, 6, 5, 3, 3, 2, 1];
+console.log(findEven(m)); // Output: [2, 4, 6, 6, 2], Time Complexity: O(n).
