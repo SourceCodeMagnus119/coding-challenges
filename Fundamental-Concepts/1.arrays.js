@@ -673,3 +673,24 @@ const findEven = (arr) => {
 
 const m = [1, 2, 3, 4, 5, 6, 7, 6, 5, 3, 3, 2, 1];
 console.log(findEven(m)); // Output: [2, 4, 6, 6, 2], Time Complexity: O(n).
+
+// Challenge: Find all uneven numbers in the array.
+
+// Write a function called 'fundUneven' that takes an a rray as an argument
+// and returns all uneven numbers in the array.
+const n = [1,2,3,4,5,6,7,8,9,0,12];
+
+const fundUneven = (arr) => {
+    if(arr.length === 0) return null;
+    const uneven = [];
+
+    for(let i = arr.length - 1; i >= 0; i--) {
+        if(arr[i] % 2 !== 0) {
+            uneven.push(arr[i]);
+        }
+    }
+
+    return uneven;
+}
+
+console.log(fundUneven(n)); // Output: [9, 7, 5, 3, 1], Time Complexity: O(n).
