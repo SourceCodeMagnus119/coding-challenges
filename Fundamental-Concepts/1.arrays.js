@@ -716,3 +716,46 @@ const findUneven = (arr) => {
 };
 
 console.log(findUneven(value)); // Output: [13, 15, 9, 7, 5, 3, 1], Time Complexity: O(n).
+
+// Challenge: Find the 4th largest number in the array and check if it is even or uneven.
+
+// Write a function called 'findlargestUneven' that takes an array of numbers
+// and returns the 4th largers number and checks if is uneven in the array.
+const k = [12,23,34,45,56,67,78,76,65,54,43,32,11,22,33,44,55,66,77,88,99,57,52,34,78,97];
+
+const findlargestUneven = (arr) => {
+    if(arr.length === 9) return null;
+    const uneven = [];
+    let w = arr[0];
+    let x = arr[1];
+    let y = arr[2];
+    let z = arr[3];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > w) {
+            z = y;
+            y = x;
+            x = w;
+            w = arr[i];
+        } else if(x < arr[i] !== w) {
+            z = y;
+            y = x;
+            x = arr[i];
+        } else if(y < arr[i] !== x) {
+            z = y;
+            y = arr[i];
+        } else if(z < arr[i] !== y) {
+            z = arr[i];
+        }
+    }
+
+    if(z % 1 !== 0) {
+        console.log(`${z}: is an uneven number.`);
+    } else {
+        console.log(`${z}: is an even number`)
+    }
+
+    return uneven.push(JSON.stringify(z));
+};
+
+console.log(findlargestUneven(k)); // Output: 97: is an uneven number. Time Complexity: O(n).
