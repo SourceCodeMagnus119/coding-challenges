@@ -694,3 +694,25 @@ const fundUneven = (arr) => {
 }
 
 console.log(fundUneven(n)); // Output: [9, 7, 5, 3, 1], Time Complexity: O(n).
+
+// Challenge: Find all even numbers in the array.
+
+// Write a function called "findUneven" that takes an array as an argument
+// and returns all uneven numbers without rem.
+
+const value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 14, 13, 12, 20];
+
+const findUneven = (arr) => {
+    if (arr.length === 0) return null;
+    const uneven = [];
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] % 2 !== 0) {
+            uneven.push(arr[i]);
+        }
+    }
+
+    return uneven;
+};
+
+console.log(findUneven(value)); // Output: [13, 15, 9, 7, 5, 3, 1], Time Complexity: O(n).
