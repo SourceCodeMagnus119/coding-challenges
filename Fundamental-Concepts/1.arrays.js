@@ -759,3 +759,21 @@ const findlargestUneven = (arr) => {
 };
 
 console.log(findlargestUneven(k)); // Output: 97: is an uneven number. Time Complexity: O(n).
+
+// Challenge: Multiply each number in the array by 5.
+
+// Write a function called 'productSum` thsat takes an array as an argumnet
+// and returns the product of all numbers multiplied by 5 and converted to a json String.
+
+const b = [12, 45, 78, 23, 56, 89, 34, 67, 90, 21];
+
+const productSum = (arr) => {
+    if(arr.length === 0) return null;
+    const product = [];
+
+    arr.forEach((num) => product.push(num * 5));
+
+    return JSON.stringify(product);
+}
+
+console.log(productSum(b)); // Output: [60, 225, 390, 115, 280, 445, 170, 335, 450, 105], Time Complexity: O(n).
