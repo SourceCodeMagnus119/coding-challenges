@@ -803,3 +803,9 @@ const processNumbers = (arr) => {
 }
 
 console.log(processNumbers(lem)); // Output: [21.333333333333332, 18, 2.6666666666666665, 4], Time Complexity: O(n).
+
+// Challenge: Generate a list of random number in an array with a limit of 45.
+
+// Write a variable that stores a list of randomly generated numbers up to 45.
+
+const random = Array.from({ length: 45 }, () => Math.floor(Math.random() * 100));
