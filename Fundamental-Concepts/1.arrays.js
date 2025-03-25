@@ -777,3 +777,29 @@ const productSum = (arr) => {
 }
 
 console.log(productSum(b)); // Output: [60, 225, 390, 115, 280, 445, 170, 335, 450, 105], Time Complexity: O(n).
+
+// Challenge: Divide all numbers in the array by 3, and return all even numbers.
+
+// Write a function called'processNumbers' that takes an array as an argument
+// and returns all even numbers numbers after dividing the initial values by 3.
+
+const lem = [23, 1, 23, 22, 43, 25, 64, 253, 54, 23, 646, 75, 34, 75645, 3423, 6544, 2, 12];
+
+const processNumbers = (arr) => {
+    if (arr.length === 0) return null;
+    const even = [];
+
+    const updatedArr = arr.map((num) => num / 3);
+
+    for (let i = 0; i < updatedArr.length; i++) {
+        if (updatedArr[i] % 2 === 0) {
+
+            even.push(updatedArr[i]);
+
+        }
+    }
+
+    return even;
+}
+
+console.log(processNumbers(lem)); // Output: [21.333333333333332, 18, 2.6666666666666665, 4], Time Complexity: O(n).
