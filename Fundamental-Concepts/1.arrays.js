@@ -821,5 +821,5 @@ const removedDuplicates = (arr) => {
     return JSON.stringify(uniqueArr);
 };
 
-const m = [2, 2, 3, 4, 5, 3, 5, 4, 6, 4, 7, 8, 6, 8, 7, 8, 8, 8, 9, 6, 6, 4, 6, 4, 6, 8, 34, 34553, 55, 345, 634535];
-console.log(removedDuplicates(m)); // Output: [2,3,4,5,6,7,8,9,34,34553,55,345,634535], Time Complexity: O(n).
+const e = [2, 2, 3, 4, 5, 3, 5, 4, 6, 4, 7, 8, 6, 8, 7, 8, 8, 8, 9, 6, 6, 4, 6, 4, 6, 8, 34, 34553, 55, 345, 634535];
+console.log(removedDuplicates(e)); // Output: [2,3,4,5,6,7,8,9,34,34553,55,345,634535], Time Complexity: O(n).
