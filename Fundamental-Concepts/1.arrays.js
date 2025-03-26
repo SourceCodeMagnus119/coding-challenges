@@ -809,3 +809,17 @@ console.log(processNumbers(lem)); // Output: [21.333333333333332, 18, 2.66666666
 // Write a variable that stores a list of randomly generated numbers up to 45.
 
 const random = Array.from({ length: 45 }, () => Math.floor(Math.random() * 100));
+
+// Write a function called ''removedDuplicates' that removes dupllicate valies from the array.
+// and returns the transformed array.
+
+const removedDuplicates = (arr) => {
+    if (arr.length === 0) return null;
+
+    const uniqueArr = [...new Set(arr)];
+
+    return JSON.stringify(uniqueArr);
+};
+
+const m = [2, 2, 3, 4, 5, 3, 5, 4, 6, 4, 7, 8, 6, 8, 7, 8, 8, 8, 9, 6, 6, 4, 6, 4, 6, 8, 34, 34553, 55, 345, 634535];
+console.log(removedDuplicates(m)); // Output: [2,3,4,5,6,7,8,9,34,34553,55,345,634535], Time Complexity: O(n).
