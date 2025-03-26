@@ -831,13 +831,14 @@ const set = Array.from({ length: 250 }, (_, index) => index);
 
 console.log(set); // Output: [0, 1, 2, ..., 249], Time Complexity: O(n).
 
-// Challenge: Find the sum of all odd numbers in an array.
+// Challecnge: Find the sum of all odd numbers in an array.
 
 // Write a function called `sumOddNumbers` that takes an array of numbers as an argument
 // and returns the sum of all odd numbers in the array.
 
 const sumOddNumbers = (arr) => {
     if (arr.length === 0) return 0;
+
     return arr.reduce((sum, num) => (num % 2 !== 0 ? sum + num : sum), 0);
 };
 
