@@ -823,3 +823,10 @@ const removedDuplicates = (arr) => {
 
 const e = [2, 2, 3, 4, 5, 3, 5, 4, 6, 4, 7, 8, 6, 8, 7, 8, 8, 8, 9, 6, 6, 4, 6, 4, 6, 8, 34, 34553, 55, 345, 634535];
 console.log(removedDuplicates(e)); // Output: [2,3,4,5,6,7,8,9,34,34553,55,345,634535], Time Complexity: O(n).
+
+// Challenge: Generate a list of numbers starting from 0 to 250.
+
+// Create an array called 'set; that stores a list of integers..
+const set = Array.from({ length: 250 }, (_, index) => index);
+
+console.log(set); // Output: [0, 1, 2, ..., 249], Time Complexity: O(n).
