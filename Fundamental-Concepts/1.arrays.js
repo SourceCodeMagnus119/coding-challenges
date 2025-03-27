@@ -844,3 +844,9 @@ const sumOddNumbers = (arr) => {
 
 const xb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(sumOddNumbers(xb)); // Output: 25, Time Complexity: O(n).
+
+// Create a variable that generates numbers up o 100.
+
+const num100 = Array.from({ length: 100 }, (_, index) => index);
+
+const arrRan = Array.from({ length: 4000 }, Math.floor(Math.random() * 4000));
