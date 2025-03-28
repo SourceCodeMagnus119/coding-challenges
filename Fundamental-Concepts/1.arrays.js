@@ -850,3 +850,18 @@ console.log(sumOddNumbers(xb)); // Output: 25, Time Complexity: O(n).
 const num100 = Array.from({ length: 100 }, (_, index) => index);
 
 const arrRan = Array.from({ length: 4000 }, Math.floor(Math.random() * 4000));
+
+// Challenge: Find the sum of all even numbers in the array.
+
+// Write a function called 'sumEvenNumber' that takes an array as an arguments
+// and returns the sum of all even numbers in the array.
+const sumEvenNumber = (arr) => {
+    if(arr.length === 0) return null;
+
+    const even = arr.reduce((n, x) => (n % 2 === 0 ? x + n : x), 0);
+
+    return even;
+}
+
+const rm = [2,3,4,2,2,31,65,2,3,2,48,70,5,5,6,7,6,4,53,64,587,79,5745,42,643464,35,64];
+console.log(sumEvenNumber(rm)); // Output: 643688 Time Complexity: 0(n).
