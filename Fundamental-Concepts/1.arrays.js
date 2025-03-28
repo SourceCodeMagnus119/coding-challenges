@@ -872,4 +872,24 @@ console.log(sumEvenNumber(rm)); // Output: 643688 Time Complexity: 0(n).
 
 const nf = Array.from({ length: 128 }, () => Math.floor(Math.random() * 128));
 
-console.log(ng); // Output: [] Time Complexity: 0(n).
+console.log(ng); // Output: [array of 128 random integers] Time Complexity: 0(n).
+
+// Challenge: Find the sum of every second number in the array and return their sum.
+
+// Write a function called 'sumfOfSecondNumber' that takes an array as an argument
+// and returns the sum of all second elements in the array.
+
+const suns = [2, 4, 6, 8, 10, 9, 7, 5, 3, 1];
+
+const sumfOfSecondNumber = (arr) => {
+    if (arr.length === 0) return null;
+    let sum = 0;
+
+    for(let i = 1; i < arr.length; i += 2) {
+        sum += arr[i];
+    }
+
+    return sum;
+};
+
+console.log(sumfOfSecondNumber(suns)); // Output: 20, Time Complexity: O(n).
