@@ -865,3 +865,11 @@ const sumEvenNumber = (arr) => {
 
 const rm = [2,3,4,2,2,31,65,2,3,2,48,70,5,5,6,7,6,4,53,64,587,79,5745,42,643464,35,64];
 console.log(sumEvenNumber(rm)); // Output: 643688 Time Complexity: 0(n).
+
+// Challenge: Generate rendom numbers with a maximum limit of 128.
+
+// Write a variable called 'mf' of type array that generates random integers.
+
+const nf = Array.from({ length: 128 }, () => Math.floor(Math.random() * 128));
+
+console.log(ng); // Output: [] Time Complexity: 0(n).
