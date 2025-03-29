@@ -911,3 +911,50 @@ const sumOddX = (arr) => {
 }
 
 console.log(sumOddX(xn)); // Output: [126] Time Complexity: 0(n).
+
+// Challenge: Find the fifth largest number in the array and multiply by 2.
+
+// Write a function called 'fithSum' that takes an array as an argument
+// and returns the fifth largest number in the array.
+
+const gn = Array.from({ length: 65 }, () => Math.floor(Math.random() * 65));
+
+const someNum = (arr) => {
+    if(arr.length === 0) return null;
+    const a = arr[0];
+    const b = arr[1];
+    const c = arr[2];
+    const d = arr[3];
+    const e = arr[4];
+
+    const uniqueArr = [...new Set(arr)];
+
+    for(let i = 0; i < uniqueArr.length; i++) {
+        if(uniqueArr[i] > a) {
+            e = d;
+            d = c;
+            c = b;
+            b = a;
+            a = uniqueArr[i];
+        } else if(b < uniqueArr[i] !== a) {
+            e = d;
+            d = c;
+            c = b;
+            b = uniqueArr[i];
+        } else if(c < uniqueArr[i] !== b) {
+            e = d;
+            d = c;
+            c = uniqueArr[i];
+        } else if(d < uniqueArr[i] !== c) {
+            e = d;
+            d = uniqueArr[i];
+        } else if(e < uniqueArr[i] !== d) {
+            e = uniqueArr[i];
+        }
+    }
+
+    const finVal = e.map((num) => num * 2);
+    return finVal;
+}
+
+console.log(someNum(gn)); // Output: [Fifth largest number multiplied by 2] Time Complexity: 0(n).
