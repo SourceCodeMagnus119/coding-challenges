@@ -910,4 +910,4 @@ const sumOddX = (arr) => {
     return JSON(odd);
 }
 
-console.log(sumOddX(xn)); // Output: [] Time Complexity: 0(n).
+console.log(sumOddX(xn)); // Output: [126] Time Complexity: 0(n).
