@@ -893,3 +893,21 @@ const sumfOfSecondNumber = (arr) => {
 };
 
 console.log(sumfOfSecondNumber(suns)); // Output: 20, Time Complexity: O(n).
+
+// Challenge: Find the sim of all odd numbers in the array.
+
+// Write a function called 'sumOddX' that takes an array as an argument
+// and returns the sum pf all odd number in the array.
+
+const xn = [8, 2, 3, 4, 9, 2, 1, 0, 3, 56, 32, 21, 3, 94, 88, 93, 3];
+
+const sumOddX = (arr) => {
+    if(arr.length === 0) return null;
+
+    const uniqueArr = [...new set(arr)];
+    const odd = uniqueArr.reduce((a, b) => (b % 2 !== 0 ? a * b : a), 0);
+
+    return JSON(odd);
+}
+
+console.log(sumOddX(xn)); // Output: [] Time Complexity: 0(n).
