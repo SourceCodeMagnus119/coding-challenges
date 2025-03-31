@@ -958,3 +958,23 @@ const someNum = (arr) => {
 }
 
 console.log(someNum(gn)); // Output: [Fifth largest number multiplied by 2] Time Complexity: 0(n).
+
+// Challeng: Find the product of all third numbers in the array.
+
+// Write a function called `productOf3` that takes an array as an argument
+// and returns the product of all third numbers in the array multiplied by three.
+
+const vn = Array.from({ length: 266 }, (_, index) => index);
+
+const productOfN = (arr) => {
+    if (arr.length === 0) return null;
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i += 3) {
+        sum += arr[i] * 3;
+    }
+
+    return `The product of n is: ${sum}`;
+};
+
+console.log(productOfN(vn)); // Output: The product of n is: [calculated sum], Time Complexity: O(n).
