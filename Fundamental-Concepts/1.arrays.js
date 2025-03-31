@@ -986,16 +986,16 @@ console.log(productOfN(vn)); // Output: The product of n is: [calculated sum], T
 const top = Array.from({ length: 66 }, () => Math.floor(Math.random() * 66));
 
 const processEven = (arr) => {
-    if(arr.length === 0) return null;
+    if (arr.length === 0) return null;
     const even = [];
 
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i] % 2 !== 0) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
             even.push(arr[i]);
         }
     }
 
     return even;
-}
+};
 
-console.log(processEven(top)); // Output: [], Time Complexity: 0(n).
+console.log(processEven(top)); // Output: [array of even numbers], Time Complexity: O(n).
