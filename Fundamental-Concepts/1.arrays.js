@@ -999,3 +999,20 @@ const processEven = (arr) => {
 };
 
 console.log(processEven(top)); // Output: [array of even numbers], Time Complexity: O(n).
+
+// Challenge: Find the sum of all odd and even numbers in the array.
+
+// Write a function called 'oddEvenSum' that takes an array as an argument
+// and returns the sum of all odd and even numbers in the array.
+const gm = [44, 22, 55, 3, 21, 32, 43, 23, 24, 65, 76, 56, 86, 78, 66, 88, 78, 77, 666, 55, 43, 21, 45, 66];
+
+const oddEvenSum = (arr) => {
+    if (arr.length === 0) return null;
+
+    const oddSum = arr.filter(num => num % 2 !== 0).reduce((sum, num) => sum + num, 0);
+    const evenSum = arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0);
+
+    return { oddSum, evenSum };
+};
+
+console.log(oddEvenSum(gm)); // Output: { oddSum: 450, evenSum: 1362 }, Time Complexity: O(n).
