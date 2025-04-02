@@ -1035,14 +1035,19 @@ const sumOfNumbers = (arr) => {
     for (let i = 0; i < uniqueArr.length; i++) {
         if (uniqueArr[i] % 2 === 0) {
             even.push(uniqueArr[i]);
+            console.log(`Even Numbers are: ${even}`);
+
             product *= uniqueArr[i];
         } else {
             odd.push(uniqueArr[i]);
+            console.log(`Odd Numbers are: ${odd}`);
+            
             kuotient += uniqueArr[i] / 3;
         }
     }
 
     return { product, kuotient };
 };
+
 const valInt = [2, 4, 3, 6, 7, 4, 333, 55, 32, 21, 5, 6, 88, 98, 76, 43, 21, 23, 28, 76, 58, 34, 3, 99, 62, 27, 33, 28, 88, 73, 22, 34, 93];
 console.log(sumOfNumbers(sumInt)); // Output: { product: ..., kuotient: ... }, Time Complexity: O(n).
