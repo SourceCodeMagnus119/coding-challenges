@@ -1051,3 +1051,22 @@ const sumOfNumbers = (arr) => {
 
 const valInt = [2, 4, 3, 6, 7, 4, 333, 55, 32, 21, 5, 6, 88, 98, 76, 43, 21, 23, 28, 76, 58, 34, 3, 99, 62, 27, 33, 28, 88, 73, 22, 34, 93];
 console.log(sumOfNumbers(sumInt)); // Output: { product: ..., kuotient: ... }, Time Complexity: O(n).
+
+// Challenge: Find the Fourth smallest number in the array and increment anually by 1.
+
+// Write a function called 'nuggetFour' that takes an array as an argument
+// and returns the fourth smallest number and checks if it is even or odd.
+const ttn = Array.from({ length: 567 }, () => Math.floor(Math.random() * 567));
+
+const nuggetFour = (arr) => {
+    if (arr.length === 0) return null;
+
+    const uniqueArr = [...new Set(arr)].sort((a, b) => a - b);
+
+    const smallFour = uniqueArr[3];
+    const annualIncrementation = smallFour * (new Date().getFullYear() + 1);
+
+    return annualIncrementation;
+};s
+
+console.log(nuggetFour(ttn)); // Output: [calculated value], Time Complexity: O(n log n).
