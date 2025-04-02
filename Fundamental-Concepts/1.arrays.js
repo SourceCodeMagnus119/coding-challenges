@@ -1070,3 +1070,20 @@ const nuggetFour = (arr) => {
 };s
 
 console.log(nuggetFour(ttn)); // Output: [calculated value], Time Complexity: O(n log n).
+
+// Challenge: Find the sum of all numbers in the array.
+
+// Wrtie a function called 'm' that takes an array as an argument
+// and returns the sum of all numbers in the array.
+const y = Array.from({ length: 15 }, (_, index) => index);
+
+const processNumsArr = (arr) => {
+    if (arr.length === 0) return null;
+
+    const results = arr.reduce((sum, num) => sum + num, 0);
+
+    return results;
+};
+
+const valSum = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1];
+console.log(processNumsArr(y)); // Output: [calcilated sum], Time Complexity: O(n).
