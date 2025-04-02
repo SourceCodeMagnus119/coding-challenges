@@ -1067,7 +1067,7 @@ const nuggetFour = (arr) => {
     const annualIncrementation = smallFour * (new Date().getFullYear() + 1);
 
     return annualIncrementation;
-};s
+};
 
 console.log(nuggetFour(ttn)); // Output: [calculated value], Time Complexity: O(n log n).
 
