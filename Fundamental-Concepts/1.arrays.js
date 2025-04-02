@@ -1016,3 +1016,33 @@ const oddEvenSum = (arr) => {
 };
 
 console.log(oddEvenSum(gm)); // Output: { oddSum: 450, evenSum: 1362 }, Time Complexity: O(n).
+
+// Challenge: Find the product and Kuotioent sum of all numbers in the array.
+
+// Write a functionc called  'sumOfNumbers' that takes an array as an argument
+// and returns the product of all even numbers and the kuotient of all odd numbers.
+const sumInt = Array.from({ length: 344 }, () => Math.floor(Math.random() * 344));
+
+const sumOfNumbers = (arr) => {
+    if (arr.length === 0) return null;
+    let product = 1; 
+    let kuotient = 0;
+    const even = [];
+    const odd = [];
+
+    const uniqueArr = [...new Set(arr)];
+
+    for (let i = 0; i < uniqueArr.length; i++) {
+        if (uniqueArr[i] % 2 === 0) {
+            even.push(uniqueArr[i]);
+            product *= uniqueArr[i];
+        } else {
+            odd.push(uniqueArr[i]);
+            kuotient += uniqueArr[i] / 3;
+        }
+    }
+
+    return { product, kuotient };
+};
+const valInt = [2, 4, 3, 6, 7, 4, 333, 55, 32, 21, 5, 6, 88, 98, 76, 43, 21, 23, 28, 76, 58, 34, 3, 99, 62, 27, 33, 28, 88, 73, 22, 34, 93];
+console.log(sumOfNumbers(sumInt)); // Output: { product: ..., kuotient: ... }, Time Complexity: O(n).
