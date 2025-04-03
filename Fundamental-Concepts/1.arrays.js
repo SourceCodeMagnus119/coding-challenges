@@ -1087,3 +1087,24 @@ const processNumsArr = (arr) => {
 
 const valSum = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1];
 console.log(processNumsArr(y)); // Output: [calcilated sum], Time Complexity: O(n).
+
+// Challenge: Find the sum of all odd numbers in the array.
+
+// Write a function called 'procNum' that takes an array as an argument
+// and returns the sum of all odd numbers in the array.
+const valueS = Array.from({ length: 450 }, () => Math.floor(Math.random() * 450));
+
+const procNum = (arr) => {
+    if (arr.length === 0) return null;
+
+    const oddSum = arr.reduce((sum, num) => {
+        if (num % 2 !== 0) {
+            return sum + num;
+        }
+        return sum;
+    }, 0);
+
+    return `Sum of Odd Numbers is: ${oddSum}`;
+};
+
+console.log(procNum(valueS)); // Output: [], Time Complexity: 0(n).
