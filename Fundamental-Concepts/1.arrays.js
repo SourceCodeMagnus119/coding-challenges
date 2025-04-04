@@ -1108,3 +1108,21 @@ const procNum = (arr) => {
 };
 
 console.log(procNum(valueS)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the sum of the right and left halve in the array.
+
+// Write a function called 'sumHalves' that takes an array as an argument
+// and returns the sum of of each halve individually.
+const halves = [47, 58, 50, 45, 65, 25, 15, 35, 52, 65, 66, 44, 22, 33, 11, 10, 100, 84, 82, 86, 84, 95, 98, 35, 96];
+
+const sumHalves = (arr) => {
+    if (arr.length === 0) return null;
+
+    const mid = Math.floor(arr.length / 2);
+    const leftSum = arr.slice(0, mid).reduce((sum, num) => sum + num, 0);
+    const rightSum = arr.slice(mid).reduce((sum, num) => sum + num, 0);
+
+    return { leftSum, rightSum };
+};
+
+console.log(sumHalves(halves)); // Output: { leftSum: ..., rightSum: ... }, Time Complexity: O(n).
