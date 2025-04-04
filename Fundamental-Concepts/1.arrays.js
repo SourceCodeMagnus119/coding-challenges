@@ -1126,3 +1126,24 @@ const sumHalves = (arr) => {
 };
 
 console.log(sumHalves(halves)); // Output: { leftSum: ..., rightSum: ... }, Time Complexity: O(n).
+
+// Challenge: find the sum of all halves in the array.
+
+// Write a function called 'sumHalves2' that takes an array as an argument
+// and returns the sum of both halves individually.
+const numHalv = Array.from({ length: 150}, () => Math.floor(Math.random() * 150));
+
+const sumHalves2 = (arr) => {
+    if(arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    for(let i = 0; i < arr.length; i++) {
+        if(i < mid) {
+            leftsum += arr[i];
+        } else {
+            rightsum = arr[i];
+        }
+    }
+}
+
+console.log(sumHalves2(numHalv)); // Output: { leftSum: ..., rightSum: ... }, Time Complexity: O(n).
