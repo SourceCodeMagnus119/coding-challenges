@@ -1207,3 +1207,25 @@ const procX = (arr) => {
 };
 
 console.log(procX(lv)); // Output: { tenth: 45, result: 450 }, Time Complexity: O(n log n).
+
+// Challenge: Find the su of even numbers in the array.
+
+// Write a function called `handleEvenSum that takes an array as an argument
+// and returns the sum of even numbers in the array.
+const irn = Array.from({ length: 876}, () => Math.floor(Math.random() * 876));
+
+const handleEvenSum = (arr) => {
+    if (arr.length === 0) return null;
+    let sum = 0;
+
+    const uniqueArr = [...new Set(arr)];
+    uniqueArr.forEach((num) => {
+        if (num % 2 === 0) {
+            sum += num;
+        }
+    });
+
+    return sum;
+};
+
+console.log(handleEvenSum(irn)); // Output: [calculated sum], Time Complexity: O(n).
