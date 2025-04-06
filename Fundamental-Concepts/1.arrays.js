@@ -1166,3 +1166,25 @@ const sumBothHalves = (arr) => {
 };
 
 console.log(sumBothHalves(sm)); // Output: { leftSum: ..., rightSum: ..., sum: ... }, Time Complexity: O(n).
+
+// Challenge: Find the sum of the right halve of the array.
+
+// Write a function called 'greedyRightSum' that takes an array as an argument
+// and returns the sum of the right halve. of the array.
+const gr = Array.from({ length: 433 }, () => Math.floor(Math.random() * 433));
+
+const greedyRightSum = (arr) => {
+    if(arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    const rightSum = arr.forEach((num) => {
+        if(num > mid) {
+            const sum = 0;
+            const odd = num.reduce((sum, num) => sum + num);
+        }
+    })
+
+    return odd;
+}
+
+console.log(greedyRightSum(gr)); // Output: [], Time Complexity: 0(n).
