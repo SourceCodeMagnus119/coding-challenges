@@ -1188,3 +1188,22 @@ const greedyRightSum = (arr) => {
 }
 
 console.log(greedyRightSum(gr)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the 10h largest number in the array and multiply by a factor of 10.
+
+// Write a function called 'procX' that takes an array as argument
+// and returns the 10th largest num in the array.
+const lv = Array.from({ length: 55 }, (_, index) => index);
+
+const procX = (arr) => {
+    if (arr.length === 0) return null;
+
+    const uniqueArr = [...new Set(arr)].sort((a, b) => b - a);
+
+    const tenth = uniqueArr[9];
+    const result = tenth * 10;
+
+    return { tenth, result };
+};
+
+console.log(procX(lv)); // Output: { tenth: 45, result: 450 }, Time Complexity: O(n log n).
