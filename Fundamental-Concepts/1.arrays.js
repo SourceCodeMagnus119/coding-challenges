@@ -1229,3 +1229,28 @@ const handleEvenSum = (arr) => {
 };
 
 console.log(handleEvenSum(irn)); // Output: [calculated sum], Time Complexity: O(n).
+
+// Challenge: Find the product of odd numbers and the kuotient of even numbers in the array.
+
+// Write a function called 'processSum' that takes n array as an argument
+// and returns the product of odd numbers and the koutient of even numbers.
+const g = Array.from({ length: 450 }, (_, index) => index);
+
+const processNum = (arr) => {
+    if (arr.length === 0) return null;
+    let product = 1;
+    let koutient = 0;
+
+    const uniqueArr = [...new Set(arr)];
+    uniqueArr.forEach((num) => {
+        if (num % 2 === 0) {
+            product *= num;
+        } else {
+            koutient += num / 3;
+        }
+    });
+
+    return { product, koutient };
+};
+
+console.log(processNum(g)); // Output: { product: ..., koutient: ... }, Time Complexity: O(n).
