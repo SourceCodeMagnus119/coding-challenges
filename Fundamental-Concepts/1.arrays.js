@@ -1253,4 +1253,22 @@ const processNum = (arr) => {
     return { product, koutient };
 };
 
-console.log(processNum(g)); // Output: { product: ..., koutient: ... }, Time Complexity: O(n).
+console.log(processNum(g)); // Output: { product: ..., koutient: ... }, Time Complexity: O(n).3
+
+// Challenge: Find the sum of all even numbers in the left halve of the array.
+
+// Write a function called 'OddHalve' that takes an array as an argument
+// and returns all odd odd numbers in the left halve;
+const i = Array.from({ length: 65 }, () => Math.floor(Math.random() * 65));
+
+const OddHalve = (arr) => {
+    if(arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    const leftHalve = arr.slice(0, mid);
+    const odd = leftHalve.filter((num) => num % 2 !== 0);
+
+    return odd;
+}
+
+console.log(OddHalve(i)); // Output: [], Time Complexity: 0(n).
