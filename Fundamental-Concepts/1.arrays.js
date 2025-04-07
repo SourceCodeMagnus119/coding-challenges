@@ -1272,3 +1272,25 @@ const OddHalve = (arr) => {
 }
 
 console.log(OddHalve(i)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the longest substring in the array.
+
+// Write a function called 'longestSubString' that takes an array as an argument
+// and returns the longest substring in the array.
+
+const longestSubString = (arr) => {
+    if (arr.length === 0) return null;
+
+    let longest = "";
+
+    arr.forEach((str) => {
+        if (str.length > longest.length) {
+            longest = str;
+        }
+    });
+
+    return longest;
+};
+
+const strings = ["apple", "banana", "cherry", "watermelon", "grape"];
+console.log(longestSubString(strings)); // Output: "watermelon", Time Complexity: O(n).
