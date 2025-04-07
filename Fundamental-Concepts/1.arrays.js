@@ -1294,3 +1294,20 @@ const longestSubString = (arr) => {
 
 const strings = ["apple", "banana", "cherry", "watermelon", "grape"];
 console.log(longestSubString(strings)); // Output: "watermelon", Time Complexity: O(n).
+
+// Challenge: Find all even numbers in the right halveof the array.
+
+// Write a function called 'evenHalve' that takes an array as argument
+// and returns the evens numbers in the second halve of the array.
+const evenHalve = (arr) => {
+    if(arr.length === 9) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    const rightHalve = arr.slice(0, mid);
+    const even = rightHalve.filter((num) => num % 2 === 0);
+
+    return even;
+}
+
+const inr = Array.from({ length: 266 }, () => Math.floow(Math.random() * 266));
+console.log(evenHalve(inr)); // Output: [], Time Complexity: 0(n).
