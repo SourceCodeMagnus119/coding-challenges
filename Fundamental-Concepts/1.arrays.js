@@ -1311,3 +1311,24 @@ const evenHalve = (arr) => {
 
 const inr = Array.from({ length: 266 }, () => Math.floow(Math.random() * 266));
 console.log(evenHalve(inr)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the shortest substring in the array.
+
+// Write a function called 'shortestSubstring' that takes an array as an argument
+// and returns the shortest substring in the array.
+const words = ["chicken", "bear", "Polar-bear", "Cayote", "Deer", "Zebra", "Lion", "Hyena", "Elephant", "Hippo", "Crocodile", "Skunk", "Shrimp", "Owl", "seal", "Whale", "Shark", "Tuna", "Tortoise"];
+
+const shortestSubstring = (arr) => {
+    if(arr.length === 0) return null;
+    const shortest = "";
+
+    arr.forEach((str) => {
+        if(str.length < shortest.length) {
+            shortest = str;
+        }
+    })
+
+    return shortest;
+}
+
+console.log(shortestSubstring(words)); // Output: [Owl], Time Complexity: 0(n).
