@@ -1331,7 +1331,7 @@ const shortestSubstring = (arr) => {
         }
     })
 
-    return shortest;
+    return { shortest, longest };
 }
 
 console.log(shortestSubstring(words)); // Output: [Owl], Time Complexity: 0(n).
