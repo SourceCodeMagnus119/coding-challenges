@@ -1321,10 +1321,13 @@ const words = ["chicken", "bear", "Polar-bear", "Cayote", "Deer", "Zebra", "Lion
 const shortestSubstring = (arr) => {
     if(arr.length === 0) return null;
     const shortest = "";
+    const longest = "";
 
     arr.forEach((str) => {
         if(str.length < shortest.length) {
             shortest = str;
+        } else if (str.length > longest.length) {
+            longest = str;
         }
     })
 
