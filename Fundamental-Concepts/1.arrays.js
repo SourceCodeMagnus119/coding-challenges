@@ -1327,8 +1327,8 @@ const shortestSubstring = (arr) => {
         if(str.length < shortest.length) {
             shortest = str;
         } else if (str.length > longest.length) {
+            longest = str;
         }
-        longest = str;
     })
 
     return { shortest, longest };
@@ -1355,4 +1355,4 @@ const rightHalveThirdNSum = (arr) => {
 }
 
 const intX = Array.from({ length: 50 }, (_, index) => index);
-console.log(rightHalveThirdNSum(intX)); // Output: [], Time Complexity: 0(n).
+console.log(rightHalveThirdNSum(intX)); // Output: [], Time Complexity: 0(n)
