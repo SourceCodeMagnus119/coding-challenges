@@ -1327,11 +1327,32 @@ const shortestSubstring = (arr) => {
         if(str.length < shortest.length) {
             shortest = str;
         } else if (str.length > longest.length) {
-            longest = str;
         }
+        longest = str;
     })
 
     return { shortest, longest };
 }
 
 console.log(shortestSubstring(words)); // Output: [Owl], Time Complexity: 0(n).
+
+// Challenge: Find the sum of third numbers in the right halve of the array.
+
+// Write a function called 'rightHalveThirdNSum' that takes an array as an argument
+// and returns the sum of all third numbers in the array.
+const rightHalveThirdNSum = (arr) => {
+    if(arr.length === 0) return null;
+    const sum = 0;
+    const mid = Math.floor(arr.length / 2);
+
+    const rightHalve = arr.slice(mid);
+
+    for(let i = 0; i < arr.length; i+3) {
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+const intX = Array.from({ length: 50 }, (_, index) => index);
+console.log(rightHalveThirdNSum(intX)); // Output: [], Time Complexity: 0(n).
