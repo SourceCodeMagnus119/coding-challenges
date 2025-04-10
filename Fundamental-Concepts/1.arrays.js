@@ -1356,3 +1356,19 @@ const rightHalveThirdNSum = (arr) => {
 
 const intX = Array.from({ length: 50 }, (_, index) => index);
 console.log(rightHalveThirdNSum(intX)); // Output: [], Time Complexity: 0(n)
+
+// Challenge Find the Second Largest number in the arrauy.
+
+// Write a function called 'secondLargest' that takes one argument
+// and reutnrs the second largest number in the array.
+const N = Array.from({ length: 50 }, () => Math.floor(Math.random() * 50));
+
+const secondLargestNum = (arr) => {
+    if(arr.length === 0) return null;
+
+    const uniqueArr = [...new Set(arr)];
+    const secondL = uniqueArr[1];
+    
+    return secondL;
+}
+console.log(secondLargest(N)); // Output: [], Time Complexity: 0(n).
