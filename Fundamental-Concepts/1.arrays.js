@@ -1347,7 +1347,7 @@ const rightHalveThirdNSum = (arr) => {
 
     const rightHalve = arr.slice(mid);
 
-    for(let i = 0; i < arr.length; i+3) {
+    for(let i = 0; i < rightHalve.length; i+3) {
         sum += arr[i];
     }
 
@@ -1371,4 +1371,5 @@ const secondLargestNum = (arr) => {
     
     return secondL;
 }
+
 console.log(secondLargest(N)); // Output: [], Time Complexity: 0(n).
