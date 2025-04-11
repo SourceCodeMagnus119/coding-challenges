@@ -1407,3 +1407,20 @@ const processInt = (arr) => {
 
 const testVal = [1,2,3,4,5,6,7,8,9,0,0,8,7,5,4,3,2,1,3,2,4,5,3,4,5,6,6,7,5];
 console.log(processInt(numVal)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find all even odd number.
+
+// Write a function called 'evenOdd' that takes an array as an argument
+// and returns all even odd numbers.
+const ir = Array.from({ length: 80 }, () => Math.floor(Math.random() * 60));
+
+const evenOdd = (arr) => {
+    if(arr.length === 0) return null;
+
+    const even = arr.filter((num) => num % 2 === 2);
+    const odd = arr.filter((num) => num % 2 !== 2);
+
+    return { odd, even };
+}
+
+console.log(evenOdd(ir)); // Output: [], TimeComplexity: 0(n).
