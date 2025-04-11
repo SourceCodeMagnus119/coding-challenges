@@ -1300,17 +1300,17 @@ console.log(longestSubString(strings)); // Output: "watermelon", Time Complexity
 // Write a function called 'evenHalve' that takes an array as argument
 // and returns the evens numbers in the second halve of the array.
 const evenHalve = (arr) => {
-    if(arr.length === 9) return null;
+    if (arr.length === 0) return null;
     const mid = Math.floor(arr.length / 2);
 
-    const rightHalve = arr.slice(0, mid);
+    const rightHalve = arr.slice(mid);
     const even = rightHalve.filter((num) => num % 2 === 0);
 
     return even;
-}
+};
 
-const inr = Array.from({ length: 266 }, () => Math.floow(Math.random() * 266));
-console.log(evenHalve(inr)); // Output: [], Time Complexity: 0(n).
+const inr = Array.from({ length: 266 }, () => Math.floor(Math.random() * 266));
+console.log(evenHalve(inr)); // Output: [array of even numbers], Time Complexity: O(n).
 
 // Challenge: Find the shortest substring in the array.
 
@@ -1319,43 +1319,40 @@ console.log(evenHalve(inr)); // Output: [], Time Complexity: 0(n).
 const words = ["chicken", "bear", "Polar-bear", "Cayote", "Deer", "Zebra", "Lion", "Hyena", "Elephant", "Hippo", "Crocodile", "Skunk", "Shrimp", "Owl", "seal", "Whale", "Shark", "Tuna", "Tortoise"];
 
 const shortestSubstring = (arr) => {
-    if(arr.length === 0) return null;
-    const shortest = "";
-    const longest = "";
+    if (arr.length === 0) return null;
+    let shortest = arr[0];
 
     arr.forEach((str) => {
-        if(str.length < shortest.length) {
+        if (str.length < shortest.length) {
             shortest = str;
-        } else if (str.length > longest.length) {
-            longest = str;
         }
-    })
+    });
 
-    return { shortest, longest };
-}
+    return shortest;
+};
 
-console.log(shortestSubstring(words)); // Output: [Owl], Time Complexity: 0(n).
+console.log(shortestSubstring(words)); // Output: "Owl", Time Complexity: O(n).
 
 // Challenge: Find the sum of third numbers in the right halve of the array.
 
 // Write a function called 'rightHalveThirdNSum' that takes an array as an argument
 // and returns the sum of all third numbers in the array.
 const rightHalveThirdNSum = (arr) => {
-    if(arr.length === 0) return null;
-    const sum = 0;
+    if (arr.length === 0) return null;
+    let sum = 0;
     const mid = Math.floor(arr.length / 2);
 
     const rightHalve = arr.slice(mid);
 
-    for(let i = 0; i < rightHalve.length; i+3) {
-        sum += arr[i];
+    for (let i = 0; i < rightHalve.length; i += 3) {
+        sum += rightHalve[i];
     }
 
     return sum;
-}
+};
 
 const intX = Array.from({ length: 50 }, (_, index) => index);
-console.log(rightHalveThirdNSum(intX)); // Output: [], Time Complexity: 0(n)
+console.log(rightHalveThirdNSum(intX)); // Output: [calculated sum], Time Complexity: O(n)
 
 // Challenge Find the Second Largest number in the arrauy.
 
@@ -1364,49 +1361,55 @@ console.log(rightHalveThirdNSum(intX)); // Output: [], Time Complexity: 0(n)
 const N = Array.from({ length: 50 }, () => Math.floor(Math.random() * 50));
 
 const secondLargestNum = (arr) => {
-    if(arr.length === 0) return null;
+    if (arr.length === 0) return null;
 
-    const uniqueArr = [...new Set(arr)];
+    const uniqueArr = [...new Set(arr)].sort((a, b) => b - a);
     const secondL = uniqueArr[1];
-    
-    return secondL;
-}
 
-console.log(secondLargest(N)); // Output: [], Time Complexity: 0(n).
+    return secondL;
+};
+
+console.log(secondLargestNum(N)); // Output: [Second largest number], Time Complexity: O(n log n).
 
 // CHallenge: Find the Smallest and Largest number and Check even odd.
 
 // Write a function called 'processNum' that takes an array as an argument
 // and returns the even odd values of min max.
-const numVal = Array.from({ length: 250 }, () => Math.floow(Math.random() * 250));
+const numVal = Array.from({ length: 250 }, () => Math.floor(Math.random() * 250));
 
 const processInt = (arr) => {
-    if(arr.length === 0) return null;
+    if (arr.length === 0) return null;
     let min = arr[0];
-    let max = arr[1];
+    let max = arr[0];
     const even = [];
     const odd = [];
 
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i] > min) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
             min = arr[i];
         }
-        if(arr[i] > max) {
+        if (arr[i] > max) {
             max = arr[i];
         }
     }
 
-    if(min % 2 --- 0) {
+    if (min % 2 === 0) {
         even.push(min);
+    } else {
+        odd.push(min);
+    }
+
+    if (max % 2 === 0) {
+        even.push(max);
     } else {
         odd.push(max);
     }
 
     return { even, odd };
-}
+};
 
-const testVal = [1,2,3,4,5,6,7,8,9,0,0,8,7,5,4,3,2,1,3,2,4,5,3,4,5,6,6,7,5];
-console.log(processInt(numVal)); // Output: [], Time Complexity: 0(n).
+const testVal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0, 8, 7, 5, 4, 3, 2, 1, 3, 2, 4, 5, 3, 4, 5, 6, 6, 7, 5];
+console.log(processInt(numVal)); // Output: { even: [...], odd: [...] }, Time Complexity: O(n).
 
 // Challenge: Find all even odd number.
 
@@ -1415,12 +1418,12 @@ console.log(processInt(numVal)); // Output: [], Time Complexity: 0(n).
 const ir = Array.from({ length: 80 }, () => Math.floor(Math.random() * 60));
 
 const evenOdd = (arr) => {
-    if(arr.length === 0) return null;
+    if (arr.length === 0) return null;
 
-    const even = arr.filter((num) => num % 2 === 2);
-    const odd = arr.filter((num) => num % 2 !== 2);
+    const even = arr.filter((num) => num % 2 === 0);
+    const odd = arr.filter((num) => num % 2 !== 0);
 
     return { odd, even };
-}
+};
 
-console.log(evenOdd(ir)); // Output: [], TimeComplexity: 0(n).
+console.log(evenOdd(ir)); // Output: { odd: [...], even: [...] }, Time Complexity: O(n).
