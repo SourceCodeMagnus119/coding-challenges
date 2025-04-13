@@ -1427,3 +1427,21 @@ const evenOdd = (arr) => {
 };
 
 console.log(evenOdd(ir)); // Output: { odd: [...], even: [...] }, Time Complexity: O(n).
+
+// Challenge: Find the product of the left halve in the array.
+
+// Write a function called 'productOfN' that takes an array as an argument
+// and returns the product of the left halve.
+const numX = Array.from({ length: 25 }, () => Math.floor(Math.random() * 25));
+
+const productOfNum = (arr) => {
+    if(arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    const leftHalve = arr.slice(0, mid);
+    const product = leftHalve.reduct((sum, num) => sum * num, 0);
+
+    return product;
+}
+
+console.log(productOfNum(numX)); // Output: [], Time Complexity: 0(n).
