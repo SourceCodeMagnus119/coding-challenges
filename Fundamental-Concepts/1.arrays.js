@@ -1445,3 +1445,24 @@ const productOfNum = (arr) => {
 }
 
 console.log(productOfNum(numX)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the shortest substring in the array.
+
+// Write a function called 'nSubstring' that takes an array as an argument
+// and returns the shortest substring in the array.
+const wrd = ['string', 'apple', 'chips', 'fries', 'filter'];
+
+const nSubstring = (arr) => {
+    if(arr.length === 0) return null;
+    const shortest = '';
+
+    arr.forEach((str) => {
+        if(str.length < shortest.length) {
+            shortest = str;
+        }
+    })
+
+    return  shortest;
+}
+
+console.log(nSubstring(wrd)); // Output: [], Time Complexity: 0(n).
