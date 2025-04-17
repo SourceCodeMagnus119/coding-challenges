@@ -1466,3 +1466,23 @@ const nSubstring = (arr) => {
 }
 
 console.log(nSubstring(wrd)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the longest substring in the array.
+
+// Write a function called 'substring' that takes an array as an argument
+// and returns the longest substring in the array.
+const substring = (arr) => {
+	if(arr.length === 0) return null;
+	const longest = '';
+
+	arr.forEach((str) => {
+		if(str.length > longest.length) {
+			longest = str;
+		}
+	});
+
+	return longest;
+}
+
+const wordSet = ["orange", "blueberry", "pear", "straw-berry", "kiwi", "carrots", "potatos", "Sweet-potatos", "Limes", "Rasberries", "Onions"];
+console.log(substring(wordSet)); // Output: [], Time Complexity: ();
