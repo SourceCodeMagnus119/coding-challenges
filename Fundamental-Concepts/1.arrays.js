@@ -1486,3 +1486,22 @@ const substring = (arr) => {
 
 const wordSet = ["orange", "blueberry", "pear", "straw-berry", "kiwi", "carrots", "potatos", "Sweet-potatos", "Limes", "Rasberries", "Onions"];
 console.log(substring(wordSet)); // Output: [], Time Complexity: ();
+
+// Challenge: Find Even numbers for the left halve and Odd numbers for the right Halve.
+
+// Write a function called 'evenOddHalve' that takes an array as an argument
+// and returns the even numbers for the right halve and odd numbers for the left halve.
+const evenOddHalve = (arr) => {
+	if(arr.length === 0) return null;
+	const mid = Math.floor(arr.length / 2);
+
+	const leftHalve = arr.slice(0, mid);
+	const rightHalve = arr.slice(mid);
+	const even = leftHalve.filter((num) => num % 2 === 0);
+	const odd = rightHalve.filter((num) => num % 2 !== 0);
+
+	return { even, odd };
+}
+
+const ms = Array.from({ length: 55 }, () => Math.floor(Math.random() * 55));
+console.log(evenOddHalve(ms)); // Output: [even: ..., odd: ...], Time Complexity: 0(n).
