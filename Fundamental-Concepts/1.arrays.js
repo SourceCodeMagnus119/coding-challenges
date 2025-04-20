@@ -1505,3 +1505,23 @@ const evenOddHalve = (arr) => {
 
 const ms = Array.from({ length: 55 }, () => Math.floor(Math.random() * 55));
 console.log(evenOddHalve(ms)); // Output: [even: ..., odd: ...], Time Complexity: 0(n).
+
+// Challenge: Findt he sum of the array.
+
+// wirte a function called 'processIntSum' that takes an array as an argument
+// and returns the sum of all numbers in the array.
+const intValX = Array.from({ length: 65 }, (_, index) => index);
+
+const processIntSum = (arr) => {
+    if (arr.length === 0) return null;
+    let sum = 0;
+    const uniqueArr = [...new Set(arr)];
+
+    uniqueArr.forEach((num) => {
+        sum += num;
+    });
+
+    return sum;
+};
+
+console.log(processIntSum(intValX)); // Output: 2080, Time Complexity: O(n);
