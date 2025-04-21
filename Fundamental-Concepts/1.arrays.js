@@ -1525,3 +1525,24 @@ const processIntSum = (arr) => {
 };
 
 console.log(processIntSum(intValX)); // Output: 2080, Time Complexity: O(n);
+
+// Challenge: Find the shortest substring in the array.
+
+// Write a function caled 'nSubstring' that takes an array as argument
+// and returns the shortest substring in the array.
+const hv = ['string', 'str', 'hope', 'personal', 'bird', 'free'];
+
+const NSubstring = (arr) => {
+    if (arr.length === 0) return null;
+    let shortest = arr[0];
+
+    arr.forEach((str) => {
+        if (str.length < shortest.length) {
+            shortest = str;
+        }
+    });
+
+    return shortest;
+};
+
+console.log(NSubstring(hv)); // Output: "str", Time Complexity: O(n).
