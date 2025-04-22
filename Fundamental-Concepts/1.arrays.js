@@ -1546,3 +1546,28 @@ const NSubstring = (arr) => {
 };
 
 console.log(NSubstring(hv)); // Output: "str", Time Complexity: O(n).
+
+// Challenge: Find Odd Product and Even kuotient.
+
+// Write a function called 'handleProductKuotient' that takes an array as an argument
+// and returns the product of odd and the kuotient of even numbers.
+const hotSum = Array.from({ length: 10 }, () => Math.floor(Math.random() * 10));
+
+const handleProductKuotient = (arr) => {
+    if (arr.length === 0) return null;
+
+    let productOdd = 1;
+    let kuotientEven = 0;
+
+    arr.forEach((num) => {
+        if (num % 2 !== 0) {
+            productOdd *= num;
+        } else {
+            kuotientEven += num / 2;
+        }
+    });
+
+    return { productOdd, kuotientEven };
+};
+
+console.log(handleProductKuotient(hotSum)); // Output: { productOdd: ..., kuotientEven: ... }, Time Complexity: O(n).
