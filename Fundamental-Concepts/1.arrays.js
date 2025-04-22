@@ -1571,3 +1571,22 @@ const handleProductKuotient = (arr) => {
 };
 
 console.log(handleProductKuotient(hotSum)); // Output: { productOdd: ..., kuotientEven: ... }, Time Complexity: O(n).
+
+// Find sum of all third numbers in the array.
+
+// Write a function called 'sumThird' that takes an array as an argument
+// and returns the sum of all third numbers in the array.
+const inn = [2, 1, 4, 3, 5, 4, 5, 4, 3, 6, 5, 7, 6, 7, 9, 7, 87, 8, 7, 89, 90];
+
+const sumThird = (arr) => {
+    if (arr.length === 0) return null;
+    let sum = 0;
+
+    for (let i = 2; i < arr.length; i += 3) {
+        sum += arr[i];
+    }
+
+    return sum;
+};
+
+console.log(sumThird(inn)); // Output: 121, Time Complexity: O(n).
