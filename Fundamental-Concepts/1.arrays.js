@@ -1596,18 +1596,21 @@ console.log(sumThird(inn)); // Output: 121, Time Complexity: O(n).
 // Write a funcgion called 'intBucket' that takes an array as an argument 
 // and returns all odd number and even numbers in the array.
 const intBucket = (arr) => {
-    if(arr.length === 0) return null;
-    
+    if (arr.length === 0) return null;
+
+    const even = [];
+    const odd = [];
+
     arr.forEach((num) => {
-        if(num % 2 === 0) {
-            const even = num;
+        if (num % 2 === 0) {
+            even.push(num);
         } else {
-            const odd = num;
+            odd.push(num);
         }
-    })
+    });
 
-    return { even, odd }
-}
+    return { even, odd };
+};
 
-const ib = [10, 20, 30, 40, 50, 60, 60 ,70 ,80 ,90 ,100];
-console.log(intBucket(ib)); // Output: [], Time Complexity 0(n).
+const ib = [10, 20, 30, 40, 50, 60, 60, 70, 80, 90, 100];
+console.log(intBucket(ib)); // Output: { even: [...], odd: [] }, Time Complexity: O(n).
