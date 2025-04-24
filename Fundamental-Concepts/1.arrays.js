@@ -1614,3 +1614,21 @@ const intBucket = (arr) => {
 
 const ib = [10, 20, 30, 40, 50, 60, 60, 70, 80, 90, 100];
 console.log(intBucket(ib)); // Output: { even: [...], odd: [] }, Time Complexity: O(n).
+
+// Challenge: Find the kuotient of the left Halve in the array.
+
+// Write a function called 'tollProduct' that takes an array as an argument
+// nd returns the kuotient of left halve in the array.
+const valS = Array.from({ length: 550 }, (_, index) => index);
+
+const tollProduct = (arr) => {
+    if (arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    const leftHalve = arr.slice(0, mid);
+    const product = leftHalve.reduce((product, num) => (num % 2 !== 0 ? product * num : product), 1);
+
+    return product;
+};
+
+console.log(tollProduct(valS)); // Output: [calculated product], Time Complexity: O(n).
