@@ -1632,3 +1632,25 @@ const tollProduct = (arr) => {
 };
 
 console.log(tollProduct(valS)); // Output: [calculated product], Time Complexity: O(n).
+
+// Challenge Find the shortest substring and removes integers for the array.
+
+// Write a function called 'processStringInts' that takes an array as argument
+// and returns the shortest substring in the array and removes duplicate values.
+const processStringInts = (arr) => {
+    if (arr.length === 0) return null;
+
+    const filteredArr = [...new Set(arr.filter(item => typeof item === 'string'))];
+
+    let shortest = filteredArr[0] || null;
+    filteredArr.forEach((str) => {
+        if (str.length < shortest.length) {
+            shortest = str;
+        }
+    });
+
+    return shortest;
+};
+
+const intStrings = ['test', 'product', 12, 'hope', 'leslie', 'kyle', 87, 90, 'grim', 'WarHammer', 40, 'Astartes', 2009, 'klingon'];
+console.log(processStringInts(intStrings)); // Output: "hope", Time Complexity: O(n).
