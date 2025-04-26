@@ -1654,3 +1654,27 @@ const processStringInts = (arr) => {
 
 const intStrings = ['test', 'product', 12, 'hope', 'leslie', 'kyle', 87, 90, 'grim', 'WarHammer', 40, 'Astartes', 2009, 'klingon'];
 console.log(processStringInts(intStrings)); // Output: "hope", Time Complexity: O(n).
+
+
+// Challenge: Find the longest substring and remove all integers.
+
+// Write a function called 'processLongestSubstring' that takes an array as an argument
+// and returns the longes substring and all integers removed.
+const sumIntVal = ['test-1', 'test-2', 'test-2', 'human', 15, 'hullmin', 'Clone', 90, 'fearsome', 100, 40, 22, 53, 5];
+
+const processLongestSubstring = (arr) => {
+    if(arr.length === 0) return null;
+    const longest = '' || null;
+
+    const newArr = [...new Set(arr.filter(item => typeof item === 'string'))];
+
+    newArr.forEach((str) => {
+        if(str.length > longest.length) {
+            longest = str;
+        }
+    })
+
+    return longest;
+}
+
+console.log(processLongestSubstring(sumIntVal)); // Output: [], Time Complexity: 0(n).
