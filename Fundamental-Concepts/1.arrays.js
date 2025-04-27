@@ -1678,3 +1678,27 @@ const processLongestSubstring = (arr) => {
 }
 
 console.log(processLongestSubstring(sumIntVal)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: filter all numbers and string in the array.
+
+// Write a function called 'filterHandler' that takes an array as an argument
+// and returns all strings and intergers.
+const holder = ['loop', 'human', 12, 'jump', 'reaper', 'constilation', 55, 'machine', 600, 'parts', 1000, 45, 90, 2, 'bunker', 9];
+
+const filterHandler = (arr) => {
+    if(arr.length === 0) return null;
+    const strings = [];
+    const numbers = [];
+
+    arr.filter((item) => {
+        if(typeof item === 'String') {
+            strings.push(item);
+        } else {
+            numbers.push(item);
+        }
+    })
+
+    return { numbers, strings }
+}
+
+console.log(filterHandler(holder)); // Output: [], Time Complexity: 0(n).
