@@ -1686,19 +1686,19 @@ console.log(processLongestSubstring(sumIntVal)); // Output: [], Time Complexity:
 const holder = ['loop', 'human', 12, 'jump', 'reaper', 'constilation', 55, 'machine', 600, 'parts', 1000, 45, 90, 2, 'bunker', 9];
 
 const filterHandler = (arr) => {
-    if(arr.length === 0) return null;
+    if (arr.length === 0) return null;
     const strings = [];
     const numbers = [];
 
-    arr.filter((item) => {
-        if(typeof item === 'String') {
+    arr.forEach((item) => {
+        if (typeof item === 'string') {
             strings.push(item);
-        } else {
+        } else if (typeof item === 'number') {
             numbers.push(item);
         }
-    })
+    });
 
-    return { numbers, strings }
-}
+    return { numbers, strings };
+};
 
-console.log(filterHandler(holder)); // Output: [], Time Complexity: 0(n).
+console.log(filterHandler(holder)); // Output: { numbers: [...], strings: [...] }, Time Complexity: O(n).
