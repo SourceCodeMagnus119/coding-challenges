@@ -41,7 +41,7 @@ class LinkedList {
 }
 
 const list = new LinkedList();
-list.append(10);
-list.append(20);
-list.append(30);
+list.append(150);
+list.append(50);
+list.append(65);
 list.printList(); // Expected output: 10 -> 20 -> 30
