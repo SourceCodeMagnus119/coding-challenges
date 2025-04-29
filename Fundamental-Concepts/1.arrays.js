@@ -1701,4 +1701,23 @@ const filterHandler = (arr) => {
     return { numbers, strings };
 };
 
-console.log(filterHandler(holder)); // Output: { numbers: [...], strings: [...] }, Time Complexity: O(n).
+console.log(filterHandler(holder)); // Output: { numbers: [...], strings: [...] }, Time Complexity: O(n).-
+
+// Challenge: Find the sum of all fifth numbers in the array.
+
+// Write a function called 'fifthSum' that takes an array as an argument
+// and returns the sum of all fifth integers.
+const valB = Array.from({ length: 166 }, (_, index) => index);
+
+const fifthSum = (arr) => {
+    if (arr.length === 0) return null;
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i += 5) {
+        sum += arr[i];
+    }
+
+    return sum;
+};
+
+console.log(fifthSum(valB)); // Output: [calculated sum], Time Complexity: O(n).
