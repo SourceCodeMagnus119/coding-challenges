@@ -1721,3 +1721,23 @@ const fifthSum = (arr) => {
 };
 
 console.log(fifthSum(valB)); // Output: [calculated sum], Time Complexity: O(n).
+
+// Challenge: Find even numbers in the first halve and odd numbers in the second halve.
+// Write a function called 'evenOddSum' that takes an array as an argument
+// and returns all odd and even numbers from both halves and remove all strings from the array.
+const objHub = ['String', 43, 6, 90, 59, 87, 94, 74, 23, 14, '100', 55, 44, 39, 'hope'];
+
+const evenOddSum = (arr) => {
+    if (arr.length === 0) return null;
+    const filteredArr = arr.filter(item => typeof item === 'number');
+    const mid = Math.floor(filteredArr.length / 2);
+
+    const leftHalve = filteredArr.slice(0, mid);
+    const rightHalve = filteredArr.slice(mid);
+    const even = leftHalve.filter((num) => num % 2 === 0);
+    const odd = rightHalve.filter((num) => num % 2 !== 0);
+
+    return { even, odd };
+};
+
+console.log(evenOddSum(objHub)); // Output: { even: [...], odd: [...] }, Time Complexity: O(n).
