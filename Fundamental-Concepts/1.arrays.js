@@ -1741,3 +1741,21 @@ const evenOddSum = (arr) => {
 };
 
 console.log(evenOddSum(objHub)); // Output: { even: [...], odd: [...] }, Time Complexity: O(n).
+
+// Challenge: REMOVE string values from the second halve of the array and returns all odd numbers in the rightHalve.
+
+// Write a function called 'offStringVFunc' that takes an array as an argument
+// and removes all string values and returning the odd values of the rightHalve.
+const offStringVFunc = (arr) => {
+    if (arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    let rightHalve = arr.slice(mid);
+    const filteredArr = rightHalve.filter((num) => typeof num === 'number');
+    const odd = filteredArr.filter((num) => num % 2 !== 0);
+
+    return odd;
+};
+
+const testArr = [8, 29, 39, 4, 15, 49, 3, 5, "tester", 89, 20, "engineer", 8, 23, 959, 2, 10, 82, 84, 'filler', 'why', 1, 'not', 575, 'Hateful', 'nice', 90];
+console.log(offStringVFunc(testArr)); // Output: [89, 23, 959, 1, 575], Time Complexity: O(n).
