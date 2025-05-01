@@ -1759,3 +1759,24 @@ const offStringVFunc = (arr) => {
 
 const testArr = [8, 29, 39, 4, 15, 49, 3, 5, "tester", 89, 20, "engineer", 8, 23, 959, 2, 10, 82, 84, 'filler', 'why', 1, 'not', 575, 'Hateful', 'nice', 90];
 console.log(offStringVFunc(testArr)); // Output: [89, 23, 959, 1, 575], Time Complexity: O(n).
+
+// Challenge: Remove strings from the array and return only the intergers.
+
+// Write a function called 'filterForInt' that takes an array as an argument and returns the sum of integers in the array.
+const valBox = (arr) => {
+    if(arr.length === 0) return null;
+    const integers = [];
+
+    const filteredArr = arr.filter((num) => typeof num === 'number');
+    
+    filteredArr.forEach((num) => {
+        integers.push(num);
+    });
+
+    const sum = filteredArr.reduce((sum, num) => sum += num, sum, 0);
+
+    return { integers, sum };
+};
+
+const valArr = ['tester', 56, 'full', 1, 2, 4, 6, 43, 67, 90];
+console.log(valBox(valArr)); // Output: [], Time Complexity: 0(n).
