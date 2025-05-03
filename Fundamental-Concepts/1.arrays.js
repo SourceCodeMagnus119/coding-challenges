@@ -1780,3 +1780,22 @@ const valBox = (arr) => {
 
 const valArr = ['tester', 56, 'full', 1, 2, 4, 6, 43, 67, 90];
 console.log(valBox(valArr)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the shortest sunstring in the array.
+
+// Write a function called 'testSubString' that takes an array as an argument and returns the shortest substring in the attay.
+const testSubString = (arr) => {
+    if(arr.length === 0) return null;
+    const longest = '';
+
+    arr.forEach((str) => {
+        if(str.length > longest.length) {
+            longest = str;
+        }
+    });
+
+    return longest;
+}
+
+const valStr = ['test1', '1', 'test2'];
+consolelog(testSubString(valStr)); // Output: [], Time Complexity: 0(n).
