@@ -1799,3 +1799,26 @@ const testSubString = (arr) => {
 
 const valStr = ['test1', '1', 'test2'];
 consolelog(testSubString(valStr)); // Output: [], Time Complexity: 0(n).
+
+// Challenge: Find the product of even numbers and the koutient of odd numbers.
+
+// Write a function called 'processEvenOdd' that takes an array as an argument
+// and returns the product of even numbers and the koutient of all odd numbers in the array.
+const processEvenODd = (arr) => {
+	if(arr.length === 0) return null;
+	const even = 1;
+	const odd = 0;
+
+	arr.forEach((num) => {
+		if(num % 2 === 0) {
+			even *= num;
+		} else {
+			odd += num / 3;
+		}
+	})
+
+	return { even, odd };
+}
+
+const bits = Array.from({ length: 205 }, (_, index) => index);
+console.log(processEvenOdd(bits)); // Output: [even: ..., odd: ...], Time Complexity: 0(n).
