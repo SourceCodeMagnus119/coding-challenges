@@ -1785,40 +1785,75 @@ console.log(valBox(valArr)); // Output: [], Time Complexity: 0(n).
 
 // Write a function called 'testSubString' that takes an array as an argument and returns the shortest substring in the attay.
 const testSubString = (arr) => {
-    if(arr.length === 0) return null;
-    const longest = '';
+    if (arr.length === 0) return null;
+    let shortest = arr[0];
 
     arr.forEach((str) => {
-        if(str.length > longest.length) {
-            longest = str;
+        if (str.length < shortest.length) {
+            shortest = str;
         }
     });
 
-    return longest;
-}
+    return shortest;
+};
 
 const valStr = ['test1', '1', 'test2'];
-consolelog(testSubString(valStr)); // Output: [], Time Complexity: 0(n).
+console.log(testSubString(valStr)); // Output: "1", Time Complexity: O(n).
 
 // Challenge: Find the product of even numbers and the koutient of odd numbers.
 
 // Write a function called 'processEvenOdd' that takes an array as an argument
 // and returns the product of even numbers and the koutient of all odd numbers in the array.
-const processEvenODd = (arr) => {
-	if(arr.length === 0) return null;
-	const even = 1;
-	const odd = 0;
+const processEvenOdd = (arr) => {
+    if (arr.length === 0) return null;
+    let evenProduct = 1;
+    let oddQuotient = 0;
 
-	arr.forEach((num) => {
-		if(num % 2 === 0) {
-			even *= num;
-		} else {
-			odd += num / 3;
-		}
-	})
+    arr.forEach((num) => {
+        if (num % 2 === 0) {
+            evenProduct *= num;
+        } else {
+            oddQuotient += num / 3;
+        }
+    });
 
-	return { even, odd };
-}
+    return { evenProduct, oddQuotient };
+};
 
 const bits = Array.from({ length: 205 }, (_, index) => index);
-console.log(processEvenOdd(bits)); // Output: [even: ..., odd: ...], Time Complexity: 0(n).
+console.log(processEvenOdd(bits)); // Output: { evenProduct: ..., oddQuotient: ... }, Time Complexity: O(n).
+
+// Challenge: Remove all string values from the array and returns all even numbers in the right halve of the array.
+
+// Write a function called 'arrHandler' that takes an array as an argument 
+// and returns the even numbers from the right halve.
+const inptValX = ['String', 'Hope', 12, '68', 899, "tester", 'see', 32];
+
+const arrHandler = (arr) => {
+    if (arr.length === 0) return null;
+    const mid = Math.floor(arr.length / 2);
+
+    const rightHalve = arr.slice(mid);
+    const filteredArr = rightHalve.filter(item => typeof item === 'number');
+    const evenNumbers = filteredArr.filter((num) => num % 2 === 0);
+
+    return evenNumbers;
+};
+
+console.log(arrHandler(inptValX)); // Output: [32], Time Complexity: O(n).
+
+// Challenge: Remove all strings from array.
+
+// Write a function called 'host' that takes an array as an argument
+// and returns the array withors string values.
+const valByt = ['hpe', 29, '400', 80, 22, 100, 89, 59, 'loop'];
+
+const host = (arr) => {
+    if (arr.length === 0) return null;
+
+    const filteredArray = arr.filter(item => typeof item === 'number');
+
+    return filteredArray;
+};
+
+console.log(host(valByt)); // Output: [29, 80, 22, 100, 89, 59], Time Complexity: O(n).
