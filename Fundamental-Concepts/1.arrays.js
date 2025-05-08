@@ -1857,3 +1857,20 @@ const host = (arr) => {
 };
 
 console.log(host(valByt)); // Output: [29, 80, 22, 100, 89, 59], Time Complexity: O(n).
+
+// Challenge: Find all odd numbers in the array and remove all string values.
+
+// Write a function called 'hubHandler' that takes an array as an argument and returns all odd numbers and their sum.
+const valHub = ['string1', 'string2', 200, 'loop', 'cake', 90, 'reach', 800, 23, 1, 45, 23, '288', 200, '29', 539, 20, 91, 283, 'poems'];
+
+const hubHandler = (arr) => {
+    if (arr.length === 0) return { odd: [], sum: 0 };
+
+    const filteredArr = arr.filter(item => typeof item === 'number');
+    const odd = filteredArr.filter(int => int % 2 !== 0);
+    const sum = odd.reduce((acc, num) => acc + num, 0);
+
+    return { odd, sum };
+};
+
+console.log(hubHandler(valHub)); // Output: { odd: [23, 1, 45, 23, 539, 91, 283], sum: 1005 }, Time Complexity: O(n).
